@@ -1,0 +1,43 @@
+# Source files
+src/
+public/
+
+# Development files
+.vscode/
+.idea/
+*.log
+*.local
+
+# Config files
+vite.config.js
+eslint.config.js
+.eslintrc*
+.prettierrc*
+
+# Git
+.git/
+.gitignore
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+
+# Test files
+**/*.test.js
+**/*.spec.js
+__tests__/
+coverage/
+
+# Documentation
+docs/
+
+# Others
+node_modules/
+.DS_Store
+*.tgz
+
+# Keep these
+!dist/
+!README.md
+!package.json
+!LICENSE
