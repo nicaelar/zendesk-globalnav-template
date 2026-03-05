@@ -1,6 +1,7 @@
 // Components only
 export { GlobalNavPageTemplate } from '../components/GlobalNavPageTemplate'
 export { TopBar } from '../components/TopBar'
+export { MainNav } from '../components/MainNav'
 export { KnowledgeSubnav } from '../components/KnowledgeSubnav'
 export { AIAgentsSubnav } from '../components/AIAgentsSubnav'
 export { ProductTrayDropdown, products } from '../components/ProductTrayDropdown'

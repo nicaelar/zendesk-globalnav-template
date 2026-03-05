@@ -1,11 +1,11 @@
-import { jsx as e, jsxs as n, Fragment as y } from "react/jsx-runtime";
-import { useState as C, useRef as ye, useEffect as ke } from "react";
+import { jsx as e, jsxs as n, Fragment as w } from "react/jsx-runtime";
+import { useState as C, useRef as fe, useEffect as be } from "react";
 import o from "styled-components";
-import { ThemeProvider as Ie } from "@zendeskgarden/react-theming";
-import { U as Se, R as ze, z as $e, O as me, V as ve, K as Ae, W as Pe, S as Te, Q as Me, T as Be, J as Ne, a4 as Ge, i as L, M, X as W, v as k, E as Fe, y as O, a as je, Y as De, l as q, k as m, B as F, o as l, e as Le, G as A, H as E, g as ie, u as oe, t as We, $ as Ee, s as He, F as Ke, A as Re, c as qe, d as Qe, p as Oe, P as Ve, w as te, N as Je, f as re, a2 as Ue, D as ae, a1 as Xe, x as Ze, r as le, L as ce, m as Ye, h as _e, I as se, q as en, n as nn, C as on, b as tn, Z as rn, _ as an } from "./GlobalNavIcons-D6JQQ4hD.js";
-import { Avatar as I } from "@zendeskgarden/react-avatars";
-import { XL as u } from "@zendeskgarden/react-typography";
-const ln = o.div`
+import { ThemeProvider as me } from "@zendeskgarden/react-theming";
+import { Avatar as y } from "@zendeskgarden/react-avatars";
+import { U as ve, R as Ce, z as we, O as oe, V as te, K as ye, W as ke, S as Ie, Q as ze, T as Se, J as $e, a4 as Ae, i as W, M, X as H, v as k, E as Te, y as V, a as Pe, Y as Me, H as J, g as re, u as ae, t as Be, $ as Ge, s as Fe, F as Ne, A as je, c as De, d as Le, p as Ke, P as We, w as le, G as P, B as N, N as He, f as ce, a2 as Ee, D as se, a1 as Re, x as qe, r as de, L as pe, m as Qe, h as Oe, I as he, q as Ve, n as Je, C as Ue, b as Xe, Z as Ze, _ as Ye, l as Q, k as v, o as l, e as _e } from "./GlobalNavIcons-D6JQQ4hD.js";
+import { XL as f } from "@zendeskgarden/react-typography";
+const en = o.div`
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
@@ -19,7 +19,7 @@ const ln = o.div`
   display: flex;
   flex-direction: column;
   gap: 2px;
-`, cn = o.button`
+`, nn = o.button`
   display: flex;
   align-items: center;
   gap: 12px;
@@ -45,45 +45,45 @@ const ln = o.div`
   &:active {
     background-color: ${(i) => i.$isActive ? "#293239" : "rgba(0, 0, 0, 0.08)"};
   }
-`, sn = o.div`
+`, on = o.div`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 20px;
   height: 20px;
   flex-shrink: 0;
-`, Q = [
-  { id: "support", name: "Support", icon: Se },
-  { id: "knowledge", name: "Knowledge", icon: ze },
-  { id: "ai-agents", name: "AI agents", icon: $e },
-  { id: "chat", name: "Chat", icon: me },
-  { id: "voice", name: "Voice", icon: ve },
-  { id: "analytics", name: "Analytics", icon: Ae },
-  { id: "workforce-management", name: "Workforce management", icon: Pe },
-  { id: "quality-assurance", name: "Quality assurance", icon: Te },
-  { id: "community", name: "Community", icon: Me },
-  { id: "sales", name: "Sales", icon: Be },
-  { id: "admin-center", name: "Admin center", icon: Ne }
-], dn = ({ currentProduct: i = "support", onSelectProduct: x, onClose: t }) => {
-  const f = (a) => {
-    x?.(a), t?.();
+`, O = [
+  { id: "support", name: "Support", icon: ve },
+  { id: "knowledge", name: "Knowledge", icon: Ce },
+  { id: "ai-agents", name: "AI agents", icon: we },
+  { id: "chat", name: "Chat", icon: oe },
+  { id: "voice", name: "Voice", icon: te },
+  { id: "analytics", name: "Analytics", icon: ye },
+  { id: "workforce-management", name: "Workforce management", icon: ke },
+  { id: "quality-assurance", name: "Quality assurance", icon: Ie },
+  { id: "community", name: "Community", icon: ze },
+  { id: "sales", name: "Sales", icon: Se },
+  { id: "admin-center", name: "Admin center", icon: $e }
+], tn = ({ currentProduct: i = "support", onSelectProduct: g, onClose: t }) => {
+  const x = (r) => {
+    g?.(r), t?.();
   };
-  return /* @__PURE__ */ e(ln, { children: Q.map((a) => {
-    const v = a.icon, r = a.id === i;
+  return /* @__PURE__ */ e(en, { children: O.map((r) => {
+    const b = r.icon, a = r.id === i;
     return /* @__PURE__ */ n(
-      cn,
+      nn,
       {
-        $isActive: r,
-        onClick: () => f(a.id),
+        $isActive: a,
+        onClick: () => x(r.id),
         children: [
-          /* @__PURE__ */ e(sn, { children: /* @__PURE__ */ e(v, { size: 20, color: r ? "white" : "#5C6970" }) }),
-          /* @__PURE__ */ e("span", { children: a.name })
+          /* @__PURE__ */ e(on, { children: /* @__PURE__ */ e(b, { size: 20, color: a ? "white" : "#5C6970" }) }),
+          /* @__PURE__ */ e("span", { children: r.name })
         ]
       },
-      a.id
+      r.id
     );
   }) });
-}, pn = o.header`
+}, rn = o.header`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -93,27 +93,27 @@ const ln = o.div`
   height: 48px;
   position: relative;
   z-index: 10;
-`, hn = o.div`
+`, an = o.div`
   display: flex;
   align-items: center;
   gap: 8px;
-`, gn = o.div`
+`, ln = o.div`
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: space-between;
   padding-right: 4px;
-`, S = o.div`
+`, I = o.div`
   display: flex;
   align-items: center;
   gap: 8px;
-`, un = o.div`
+`, cn = o.div`
   display: flex;
   align-items: center;
   justify-content: center;
   height: 32px;
   width: 40px;
-`, H = o.div`
+`, E = o.div`
   position: relative;
   display: flex;
   align-items: center;
@@ -130,14 +130,14 @@ const ln = o.div`
   &:active {
     background-color: rgba(92, 105, 112, 0.16);
   }
-`, xn = o.span`
+`, sn = o.span`
   font-family: 'SF Pro Text', sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
   letter-spacing: -0.154px;
   color: #293239;
-`, de = o.div`
+`, U = o.div`
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -149,7 +149,7 @@ const ln = o.div`
   line-height: 16px;
   letter-spacing: -0.0004px;
   color: #293239;
-`, j = o.div`
+`, K = o.div`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -180,11 +180,11 @@ const ln = o.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`, N = o.div`
+`, G = o.div`
   width: 1px;
   height: 24px;
   background-color: #d8dcde;
-`, fn = o.button`
+`, dn = o.button`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -214,7 +214,7 @@ const ln = o.div`
     color: #848f99;
     cursor: not-allowed;
   }
-`, K = o.button`
+`, R = o.button`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -245,7 +245,7 @@ const ln = o.div`
     cursor: not-allowed;
     background-color: transparent;
   }
-`, b = o.button`
+`, m = o.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -270,7 +270,7 @@ const ln = o.div`
   &:disabled {
     cursor: not-allowed;
   }
-`, bn = o.div`
+`, pn = o.div`
   position: absolute;
   top: -4px;
   right: -4px;
@@ -293,171 +293,346 @@ o.div`
   align-items: center;
   gap: 8px;
 `;
-const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
-  const [t, f] = C(!1), a = ye(null), v = (w) => {
-    x?.(w);
+const hn = ({ currentProduct: i = "support", onProductChange: g }) => {
+  const [t, x] = C(!1), r = fe(null), b = (S) => {
+    g?.(S);
   };
-  ke(() => {
-    const w = (D) => {
-      a.current && !a.current.contains(D.target) && f(!1);
+  be(() => {
+    const S = (ue) => {
+      r.current && !r.current.contains(ue.target) && x(!1);
     };
     if (t)
-      return document.addEventListener("mousedown", w), () => document.removeEventListener("mousedown", w);
+      return document.addEventListener("mousedown", S), () => document.removeEventListener("mousedown", S);
   }, [t]);
-  const r = Q.find((w) => w.id === i) || Q[0], T = i === "admin-center", V = i === "knowledge", J = i === "ai-agents", U = i === "workforce-management", X = i === "quality-assurance", Z = i === "analytics";
-  return /* @__PURE__ */ n(pn, { children: [
-    /* @__PURE__ */ n(hn, { children: [
-      /* @__PURE__ */ e(un, { children: /* @__PURE__ */ e(Ge, { size: 20 }) }),
+  const a = O.find((S) => S.id === i) || O[0], z = i === "admin-center", j = i === "knowledge", h = i === "ai-agents", D = i === "workforce-management", L = i === "quality-assurance", xe = i === "analytics";
+  return /* @__PURE__ */ n(rn, { children: [
+    /* @__PURE__ */ n(an, { children: [
+      /* @__PURE__ */ e(cn, { children: /* @__PURE__ */ e(Ae, { size: 20 }) }),
       /* @__PURE__ */ n(
-        H,
+        E,
         {
-          ref: a,
-          onClick: () => f(!t),
+          ref: r,
+          onClick: () => x(!t),
           children: [
-            /* @__PURE__ */ e(xn, { children: r.name }),
-            /* @__PURE__ */ e(L, { size: 12 }),
+            /* @__PURE__ */ e(sn, { children: a.name }),
+            /* @__PURE__ */ e(W, { size: 12 }),
             t && /* @__PURE__ */ e(
-              dn,
+              tn,
               {
                 currentProduct: i,
-                onSelectProduct: v,
-                onClose: () => f(!1)
+                onSelectProduct: b,
+                onClose: () => x(!1)
               }
             )
           ]
         }
       )
     ] }),
-    /* @__PURE__ */ e(gn, { children: T ? (
+    /* @__PURE__ */ e(ln, { children: z ? (
       // Admin Center Header
-      /* @__PURE__ */ n(y, { children: [
+      /* @__PURE__ */ n(w, { children: [
         /* @__PURE__ */ n("div", { style: { display: "flex", alignItems: "center", gap: "8px" }, children: [
-          /* @__PURE__ */ e(B, { children: /* @__PURE__ */ e(N, {}) }),
-          /* @__PURE__ */ e(de, { children: "Camera obscura" })
+          /* @__PURE__ */ e(B, { children: /* @__PURE__ */ e(G, {}) }),
+          /* @__PURE__ */ e(U, { children: "Camera obscura" })
         ] }),
-        /* @__PURE__ */ n(S, { children: [
-          /* @__PURE__ */ n(j, { children: [
+        /* @__PURE__ */ n(I, { children: [
+          /* @__PURE__ */ n(K, { children: [
             /* @__PURE__ */ e(M, { size: 16 }),
             /* @__PURE__ */ e("span", { children: "Search admin center" })
           ] }),
-          /* @__PURE__ */ e(b, { children: /* @__PURE__ */ e(W, { size: 20 }) }),
-          /* @__PURE__ */ e(I, { size: "small", backgroundColor: "#f8f9f9", children: /* @__PURE__ */ e(k, { size: 16, color: "#5C6970" }) })
+          /* @__PURE__ */ e(m, { children: /* @__PURE__ */ e(H, { size: 20 }) }),
+          /* @__PURE__ */ e(y, { size: "small", backgroundColor: "#f8f9f9", children: /* @__PURE__ */ e(k, { size: 16, color: "#5C6970" }) })
         ] })
       ] })
-    ) : V ? (
+    ) : j ? (
       // Knowledge Header
-      /* @__PURE__ */ n(y, { children: [
+      /* @__PURE__ */ n(w, { children: [
         /* @__PURE__ */ n("div", { style: { display: "flex", alignItems: "center", gap: "8px" }, children: [
-          /* @__PURE__ */ e(B, { children: /* @__PURE__ */ e(N, {}) }),
-          /* @__PURE__ */ n(H, { children: [
+          /* @__PURE__ */ e(B, { children: /* @__PURE__ */ e(G, {}) }),
+          /* @__PURE__ */ n(E, { children: [
             /* @__PURE__ */ e("span", { style: { fontSize: "12px", fontWeight: 600, lineHeight: "16px", letterSpacing: "-0.0004px", color: "#293239" }, children: "Joe's Coffee" }),
-            /* @__PURE__ */ e(L, { size: 12 })
+            /* @__PURE__ */ e(W, { size: 12 })
           ] })
         ] }),
-        /* @__PURE__ */ n(S, { children: [
+        /* @__PURE__ */ n(I, { children: [
           /* @__PURE__ */ n("div", { style: { display: "flex", alignItems: "center", gap: "8px" }, children: [
-            /* @__PURE__ */ e(K, { size: "small", children: "Create content" }),
-            /* @__PURE__ */ e(K, { size: "small", disabled: !0, children: "Help center" })
+            /* @__PURE__ */ e(R, { size: "small", children: "Create content" }),
+            /* @__PURE__ */ e(R, { size: "small", disabled: !0, children: "Help center" })
           ] }),
-          /* @__PURE__ */ e(b, { children: /* @__PURE__ */ e(W, { size: 20 }) }),
-          /* @__PURE__ */ e(I, { size: "small", backgroundColor: "#f8f9f9", children: /* @__PURE__ */ e(k, { size: 16, color: "#5C6970" }) })
+          /* @__PURE__ */ e(m, { children: /* @__PURE__ */ e(H, { size: 20 }) }),
+          /* @__PURE__ */ e(y, { size: "small", backgroundColor: "#f8f9f9", children: /* @__PURE__ */ e(k, { size: 16, color: "#5C6970" }) })
         ] })
       ] })
-    ) : J ? (
+    ) : h ? (
       // AI Agents Header
-      /* @__PURE__ */ n(y, { children: [
+      /* @__PURE__ */ n(w, { children: [
         /* @__PURE__ */ n("div", { style: { display: "flex", alignItems: "center", gap: "8px" }, children: [
-          /* @__PURE__ */ e(B, { children: /* @__PURE__ */ e(N, {}) }),
-          /* @__PURE__ */ e(de, { children: "Camera obscura" })
+          /* @__PURE__ */ e(B, { children: /* @__PURE__ */ e(G, {}) }),
+          /* @__PURE__ */ e(U, { children: "Camera obscura" })
         ] }),
-        /* @__PURE__ */ n(S, { children: [
-          /* @__PURE__ */ n(H, { children: [
+        /* @__PURE__ */ n(I, { children: [
+          /* @__PURE__ */ n(E, { children: [
             /* @__PURE__ */ e("span", { style: { fontSize: "12px", fontWeight: 600, lineHeight: "16px", letterSpacing: "-0.0004px", color: "#293239" }, children: "Test bot" }),
-            /* @__PURE__ */ e(L, { size: 12 })
+            /* @__PURE__ */ e(W, { size: 12 })
           ] }),
-          /* @__PURE__ */ e(b, { children: /* @__PURE__ */ e(W, { size: 20 }) }),
-          /* @__PURE__ */ e(I, { size: "small", backgroundColor: "#f8f9f9", children: /* @__PURE__ */ e(k, { size: 16, color: "#5C6970" }) })
+          /* @__PURE__ */ e(m, { children: /* @__PURE__ */ e(H, { size: 20 }) }),
+          /* @__PURE__ */ e(y, { size: "small", backgroundColor: "#f8f9f9", children: /* @__PURE__ */ e(k, { size: 16, color: "#5C6970" }) })
         ] })
       ] })
-    ) : U ? (
+    ) : D ? (
       // Workforce Management Header
-      /* @__PURE__ */ n(y, { children: [
+      /* @__PURE__ */ n(w, { children: [
         /* @__PURE__ */ e("div", {}),
-        /* @__PURE__ */ n(S, { children: [
-          /* @__PURE__ */ n(j, { children: [
+        /* @__PURE__ */ n(I, { children: [
+          /* @__PURE__ */ n(K, { children: [
             /* @__PURE__ */ e(M, { size: 16 }),
             /* @__PURE__ */ e("span", { children: "Search" })
           ] }),
-          /* @__PURE__ */ e(b, { children: /* @__PURE__ */ e(Fe, { size: 20 }) }),
-          /* @__PURE__ */ e(I, { size: "small", backgroundColor: "#f8f9f9", children: /* @__PURE__ */ e(k, { size: 16, color: "#5C6970" }) })
+          /* @__PURE__ */ e(m, { children: /* @__PURE__ */ e(Te, { size: 20 }) }),
+          /* @__PURE__ */ e(y, { size: "small", backgroundColor: "#f8f9f9", children: /* @__PURE__ */ e(k, { size: 16, color: "#5C6970" }) })
         ] })
       ] })
-    ) : X ? (
+    ) : L ? (
       // Quality Assurance Header
-      /* @__PURE__ */ n(y, { children: [
+      /* @__PURE__ */ n(w, { children: [
         /* @__PURE__ */ e("div", {}),
-        /* @__PURE__ */ n(S, { children: [
-          /* @__PURE__ */ n(j, { children: [
+        /* @__PURE__ */ n(I, { children: [
+          /* @__PURE__ */ n(K, { children: [
             /* @__PURE__ */ e(M, { size: 16 }),
             /* @__PURE__ */ e("span", { children: "Search" })
           ] }),
-          /* @__PURE__ */ e(I, { size: "small", backgroundColor: "#f8f9f9", children: /* @__PURE__ */ e(k, { size: 16, color: "#5C6970" }) })
+          /* @__PURE__ */ e(y, { size: "small", backgroundColor: "#f8f9f9", children: /* @__PURE__ */ e(k, { size: 16, color: "#5C6970" }) })
         ] })
       ] })
-    ) : Z ? (
+    ) : xe ? (
       // Analytics Header
-      /* @__PURE__ */ n(y, { children: [
+      /* @__PURE__ */ n(w, { children: [
         /* @__PURE__ */ e("div", {}),
-        /* @__PURE__ */ n(S, { children: [
-          /* @__PURE__ */ n(j, { children: [
+        /* @__PURE__ */ n(I, { children: [
+          /* @__PURE__ */ n(K, { children: [
             /* @__PURE__ */ e(M, { size: 16 }),
             /* @__PURE__ */ e("span", { children: "Search" })
           ] }),
-          /* @__PURE__ */ e(I, { size: "small", backgroundColor: "#f8f9f9", children: /* @__PURE__ */ e(k, { size: 16, color: "#5C6970" }) })
+          /* @__PURE__ */ e(y, { size: "small", backgroundColor: "#f8f9f9", children: /* @__PURE__ */ e(k, { size: 16, color: "#5C6970" }) })
         ] })
       ] })
     ) : (
       // Default Header
-      /* @__PURE__ */ n(y, { children: [
+      /* @__PURE__ */ n(w, { children: [
         /* @__PURE__ */ n("div", { style: { display: "flex", alignItems: "center" }, children: [
-          /* @__PURE__ */ e(B, { children: /* @__PURE__ */ e(N, {}) }),
-          /* @__PURE__ */ n(fn, { children: [
-            /* @__PURE__ */ e(O, { size: 12 }),
+          /* @__PURE__ */ e(B, { children: /* @__PURE__ */ e(G, {}) }),
+          /* @__PURE__ */ n(dn, { children: [
+            /* @__PURE__ */ e(V, { size: 12 }),
             /* @__PURE__ */ e("span", { children: "Add" })
           ] })
         ] }),
-        /* @__PURE__ */ n(S, { children: [
+        /* @__PURE__ */ n(I, { children: [
           /* @__PURE__ */ n("div", { style: { display: "flex", alignItems: "center", gap: "8px" }, children: [
-            /* @__PURE__ */ e(b, { children: /* @__PURE__ */ e(M, { size: 20 }) }),
-            /* @__PURE__ */ e(K, { size: "small", disabled: !0, children: "Conversations" }),
-            /* @__PURE__ */ e(b, { children: /* @__PURE__ */ e(me, { size: 20 }) }),
-            /* @__PURE__ */ e(b, { children: /* @__PURE__ */ e(ve, { size: 20 }) })
+            /* @__PURE__ */ e(m, { children: /* @__PURE__ */ e(M, { size: 20 }) }),
+            /* @__PURE__ */ e(R, { size: "small", disabled: !0, children: "Conversations" }),
+            /* @__PURE__ */ e(m, { children: /* @__PURE__ */ e(oe, { size: 20 }) }),
+            /* @__PURE__ */ e(m, { children: /* @__PURE__ */ e(te, { size: 20 }) })
           ] }),
-          /* @__PURE__ */ e(B, { children: /* @__PURE__ */ e(N, {}) }),
-          /* @__PURE__ */ n(b, { children: [
-            /* @__PURE__ */ e(je, { size: 20 }),
-            /* @__PURE__ */ e(bn, { children: "1" })
+          /* @__PURE__ */ e(B, { children: /* @__PURE__ */ e(G, {}) }),
+          /* @__PURE__ */ n(m, { children: [
+            /* @__PURE__ */ e(Pe, { size: 20 }),
+            /* @__PURE__ */ e(pn, { children: "1" })
           ] }),
-          /* @__PURE__ */ e(b, { children: /* @__PURE__ */ e(De, { size: 20 }) }),
-          /* @__PURE__ */ e(I, { size: "small", backgroundColor: "#f8f9f9", children: /* @__PURE__ */ e(k, { size: 16, color: "#5C6970" }) })
+          /* @__PURE__ */ e(m, { children: /* @__PURE__ */ e(Me, { size: 20 }) }),
+          /* @__PURE__ */ e(y, { size: "small", backgroundColor: "#f8f9f9", children: /* @__PURE__ */ e(k, { size: 16, color: "#5C6970" }) })
         ] })
       ] })
     ) })
   ] });
-}, vn = o.div`
+}, gn = o.nav`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 56px;
+  height: 100%;
+  padding: 12px 0;
+  background-color: #f8f9f9;
+  position: relative;
+`, xn = o.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 231px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(92, 105, 112, 0.08));
+  pointer-events: none;
+`, un = o.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  z-index: 1;
+`, fn = o.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 48px;
+`, bn = o.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: ${(i) => i.$isActive ? "#293239" : "transparent"};
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  padding: 0;
+
+  &:hover {
+    background-color: ${(i) => i.$isActive ? "#293239" : "rgba(0, 0, 0, 0.08)"};
+  }
+`, mn = o.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  z-index: 1;
+`, vn = o.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 56px;
+  height: 48px;
+  padding: 0 16px;
+`, Cn = o.div`
+  width: 23px;
+  height: 1px;
+  background-color: #d8dcde;
+`, wn = o.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: white;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.15s;
+  padding: 0;
+  box-shadow: 0px 4px 8px 0px rgba(10, 13, 14, 0.16);
+
+  &:hover {
+    background-color: rgba(92, 105, 112, 0.08);
+  }
+
+  &:active {
+    background-color: rgba(92, 105, 112, 0.16);
+  }
+`, yn = [
+  { id: 0, icon: J, label: "Home" },
+  { id: 1, icon: he, label: "Inbox" },
+  { id: 2, icon: Xe, label: "Contacts" },
+  { id: 3, icon: re, label: "Organization" },
+  { id: 4, icon: Ze, label: "Custom Objects" },
+  { id: 5, icon: N, label: "Analytics" },
+  { id: 6, icon: P, label: "Settings" }
+], kn = [
+  { id: 0, icon: J, label: "Home" },
+  { id: 1, icon: re, label: "Account" },
+  { id: 2, icon: ae, label: "People" },
+  { id: 3, icon: Be, label: "Channels" },
+  { id: 4, icon: Ge, label: "AI" },
+  { id: 5, icon: Fe, label: "Workspaces" },
+  { id: 6, icon: Ne, label: "Objects & rules" },
+  { id: 7, icon: je, label: "Apps and integrations" }
+], In = [
+  { id: 0, icon: J, label: "Home" },
+  { id: 1, icon: De, label: "Knowledge" },
+  { id: 2, icon: Le, label: "Moderate content" },
+  { id: 3, icon: Ke, label: "Arrange content" },
+  { id: 4, icon: We, label: "Customize design" },
+  { id: 5, icon: le, label: "User permissions" },
+  { id: 6, icon: P, label: "Settings" }
+], zn = [
+  { id: 0, icon: N, label: "Analytics" },
+  { id: 1, icon: He, label: "Content" },
+  { id: 2, icon: ce, label: "Conversations" },
+  { id: 3, icon: P, label: "Settings" },
+  { id: 4, icon: null, label: "separator" },
+  { id: 5, icon: Ee, label: "AI agent management" },
+  { id: 6, icon: le, label: "Permissions" },
+  { id: 7, icon: se, label: "Database" },
+  { id: 8, icon: Re, label: "Apps" },
+  { id: 9, icon: qe, label: "Integrations" }
+], Sn = [
+  { id: 0, icon: de, label: "Real-time monitoring" },
+  { id: 1, icon: pe, label: "Dashboard" },
+  { id: 2, icon: N, label: "Reports" },
+  { id: 3, icon: se, label: "Data" },
+  { id: 4, icon: Qe, label: "Export" },
+  { id: 5, icon: P, label: "Settings" }
+], $n = [
+  { id: 0, icon: pe, label: "Dashboard" },
+  { id: 1, icon: ce, label: "Conversations" },
+  { id: 2, icon: Oe, label: "Reviews" },
+  { id: 3, icon: he, label: "Inbox" },
+  { id: 4, icon: Ve, label: "Training" }
+], An = [
+  { id: 0, icon: de, label: "Real-time monitoring" },
+  { id: 1, icon: N, label: "Analytics" },
+  { id: 2, icon: Je, label: "Forecasting" },
+  { id: 3, icon: Ue, label: "Scheduling" },
+  { id: 4, icon: ae, label: "Team" },
+  { id: 5, icon: P, label: "Settings" }
+], Tn = ({
+  currentProduct: i,
+  activeNavItem: g,
+  setActiveNavItem: t,
+  isSubnavExpanded: x,
+  setIsSubnavExpanded: r
+}) => {
+  const b = i === "admin-center" ? kn : i === "knowledge" ? In : i === "ai-agents" ? zn : i === "analytics" ? Sn : i === "quality-assurance" ? $n : i === "workforce-management" ? An : yn, j = i === "knowledge" || i === "ai-agents";
+  return /* @__PURE__ */ n(gn, { children: [
+    /* @__PURE__ */ e(xn, {}),
+    /* @__PURE__ */ e(un, { children: b.map((h) => {
+      if (h.label === "separator")
+        return /* @__PURE__ */ e(vn, { children: /* @__PURE__ */ e(Cn, {}) }, h.id);
+      const D = g === h.id, L = typeof h.icon == "function" ? h.icon : null;
+      return /* @__PURE__ */ e(fn, { children: /* @__PURE__ */ e(
+        bn,
+        {
+          $isActive: D,
+          onClick: () => t(h.id),
+          "aria-label": h.label,
+          children: L ? /* @__PURE__ */ e(L, { size: 20, color: D ? "white" : "#5C6970" }) : h.icon
+        }
+      ) }, h.id);
+    }) }),
+    /* @__PURE__ */ e(mn, { children: j && /* @__PURE__ */ e(
+      wn,
+      {
+        onClick: () => r(!x),
+        "aria-label": x ? "Collapse" : "Expand",
+        children: /* @__PURE__ */ e(Ye, { size: 20, color: "#5C6970" })
+      }
+    ) })
+  ] });
+}, Pn = o.div`
   display: flex;
   flex-direction: column;
   width: 240px;
   height: 100%;
   background-color: #f8f9f9;
   padding: 8px;
-`, Cn = o.div`
+`, Mn = o.div`
   display: flex;
   gap: 8px;
   align-items: center;
   padding: 12px 12px 12px 12px;
   width: 100%;
-`, wn = o.h2`
+`, Bn = o.h2`
   flex: 1;
   font-family: 'SF Pro Text', sans-serif;
   font-size: 18px;
@@ -467,7 +642,7 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   color: #2f3941;
   margin: 0;
   padding: 4px 0;
-`, yn = o.button`
+`, Gn = o.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -487,13 +662,13 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   &:active {
     background-color: rgba(92, 105, 112, 0.16);
   }
-`, pe = o.div`
+`, X = o.div`
   display: flex;
   flex-direction: column;
   gap: 2px;
   padding-bottom: 12px;
   width: 100%;
-`, P = o.div`
+`, T = o.div`
   display: flex;
   align-items: center;
   height: 32px;
@@ -510,7 +685,7 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   &:active {
     background-color: ${(i) => i.$isCurrent ? "#293239" : "rgba(92, 105, 112, 0.16)"};
   }
-`, g = o.p`
+`, u = o.p`
   flex: 1;
   font-family: 'SF Pro Text', sans-serif;
   font-size: 14px;
@@ -522,7 +697,7 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 0;
-`, z = o.div`
+`, $ = o.div`
   display: flex;
   align-items: center;
   justify-center: center;
@@ -538,11 +713,11 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   letter-spacing: -0.0004px;
   color: #49545c;
   text-align: center;
-`, kn = o.div`
+`, Fn = o.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-`, In = o.div`
+`, Nn = o.div`
   display: flex;
   align-items: center;
   height: 40px;
@@ -558,13 +733,13 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   &:active {
     background-color: rgba(92, 105, 112, 0.16);
   }
-`, Sn = o.div`
+`, jn = o.div`
   display: flex;
   flex: 1;
   gap: 8px;
   align-items: center;
   padding: 12px 8px 12px 8px;
-`, zn = o.p`
+`, Dn = o.p`
   flex: 1;
   font-family: 'SF Pro Text', sans-serif;
   font-size: 12px;
@@ -576,81 +751,81 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 0;
-`, $n = o.div`
+`, Ln = o.div`
   flex: 1;
   height: 1px;
   background-color: #d8dcde;
-`, An = o.div`
+`, Kn = o.div`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 32px;
   height: 100%;
-`, $ = o(P)`
+`, A = o(T)`
   padding-left: ${(i) => i.$depth * 24 + 12}px;
-`, Pn = () => {
-  const [i, x] = C(!0);
-  return /* @__PURE__ */ n(vn, { children: [
-    /* @__PURE__ */ n(Cn, { children: [
-      /* @__PURE__ */ e(wn, { children: "Knowledge" }),
-      /* @__PURE__ */ e(yn, { children: /* @__PURE__ */ e(O, { size: 20, color: "#5C6970" }) })
+`, Wn = () => {
+  const [i, g] = C(!0);
+  return /* @__PURE__ */ n(Pn, { children: [
+    /* @__PURE__ */ n(Mn, { children: [
+      /* @__PURE__ */ e(Bn, { children: "Knowledge" }),
+      /* @__PURE__ */ e(Gn, { children: /* @__PURE__ */ e(V, { size: 20, color: "#5C6970" }) })
     ] }),
-    /* @__PURE__ */ e(pe, { children: /* @__PURE__ */ e(P, { $isCurrent: !0, children: /* @__PURE__ */ e(g, { $isCurrent: !0, children: "Sources" }) }) }),
-    /* @__PURE__ */ n(kn, { children: [
-      /* @__PURE__ */ n(In, { onClick: () => x(!i), children: [
-        /* @__PURE__ */ n(Sn, { children: [
-          /* @__PURE__ */ e(zn, { children: "Content" }),
-          /* @__PURE__ */ e($n, {})
+    /* @__PURE__ */ e(X, { children: /* @__PURE__ */ e(T, { $isCurrent: !0, children: /* @__PURE__ */ e(u, { $isCurrent: !0, children: "Sources" }) }) }),
+    /* @__PURE__ */ n(Fn, { children: [
+      /* @__PURE__ */ n(Nn, { onClick: () => g(!i), children: [
+        /* @__PURE__ */ n(jn, { children: [
+          /* @__PURE__ */ e(Dn, { children: "Content" }),
+          /* @__PURE__ */ e(Ln, {})
         ] }),
-        /* @__PURE__ */ e(An, { children: i ? /* @__PURE__ */ e(q, { size: 16, color: "#5C6970" }) : /* @__PURE__ */ e(m, { size: 16, color: "#5C6970" }) })
+        /* @__PURE__ */ e(Kn, { children: i ? /* @__PURE__ */ e(Q, { size: 16, color: "#5C6970" }) : /* @__PURE__ */ e(v, { size: 16, color: "#5C6970" }) })
       ] }),
-      i && /* @__PURE__ */ n(pe, { children: [
-        /* @__PURE__ */ n(P, { children: [
-          /* @__PURE__ */ e(g, { children: "All content" }),
-          /* @__PURE__ */ e(z, { children: "24" })
+      i && /* @__PURE__ */ n(X, { children: [
+        /* @__PURE__ */ n(T, { children: [
+          /* @__PURE__ */ e(u, { children: "All content" }),
+          /* @__PURE__ */ e($, { children: "24" })
         ] }),
-        /* @__PURE__ */ n($, { $depth: 0, children: [
-          /* @__PURE__ */ e(m, { size: 16, color: "#5C6970" }),
-          /* @__PURE__ */ e(g, { style: { marginLeft: "8px" }, children: "Joe's Coffee" }),
-          /* @__PURE__ */ e(z, { children: "24" })
+        /* @__PURE__ */ n(A, { $depth: 0, children: [
+          /* @__PURE__ */ e(v, { size: 16, color: "#5C6970" }),
+          /* @__PURE__ */ e(u, { style: { marginLeft: "8px" }, children: "Joe's Coffee" }),
+          /* @__PURE__ */ e($, { children: "24" })
         ] }),
-        /* @__PURE__ */ n($, { $depth: 1, children: [
-          /* @__PURE__ */ e(m, { size: 16, color: "#5C6970" }),
-          /* @__PURE__ */ e(g, { style: { marginLeft: "8px" }, children: "Getting Started" })
+        /* @__PURE__ */ n(A, { $depth: 1, children: [
+          /* @__PURE__ */ e(v, { size: 16, color: "#5C6970" }),
+          /* @__PURE__ */ e(u, { style: { marginLeft: "8px" }, children: "Getting Started" })
         ] }),
-        /* @__PURE__ */ n($, { $depth: 1, children: [
-          /* @__PURE__ */ e(m, { size: 16, color: "#5C6970" }),
-          /* @__PURE__ */ e(g, { style: { marginLeft: "8px" }, children: "Troubleshooting Guides" })
+        /* @__PURE__ */ n(A, { $depth: 1, children: [
+          /* @__PURE__ */ e(v, { size: 16, color: "#5C6970" }),
+          /* @__PURE__ */ e(u, { style: { marginLeft: "8px" }, children: "Troubleshooting Guides" })
         ] }),
-        /* @__PURE__ */ n($, { $depth: 1, children: [
-          /* @__PURE__ */ e(m, { size: 16, color: "#5C6970" }),
-          /* @__PURE__ */ e(g, { style: { marginLeft: "8px" }, children: "Product FAQs" })
+        /* @__PURE__ */ n(A, { $depth: 1, children: [
+          /* @__PURE__ */ e(v, { size: 16, color: "#5C6970" }),
+          /* @__PURE__ */ e(u, { style: { marginLeft: "8px" }, children: "Product FAQs" })
         ] }),
-        /* @__PURE__ */ n($, { $depth: 1, children: [
-          /* @__PURE__ */ e(m, { size: 16, color: "#5C6970" }),
-          /* @__PURE__ */ e(g, { style: { marginLeft: "8px" }, children: "Policies and Procedures" })
+        /* @__PURE__ */ n(A, { $depth: 1, children: [
+          /* @__PURE__ */ e(v, { size: 16, color: "#5C6970" }),
+          /* @__PURE__ */ e(u, { style: { marginLeft: "8px" }, children: "Policies and Procedures" })
         ] }),
-        /* @__PURE__ */ n($, { $depth: 0, children: [
-          /* @__PURE__ */ e(m, { size: 16, color: "#5C6970" }),
-          /* @__PURE__ */ e(g, { style: { marginLeft: "8px" }, children: "Confluence" }),
-          /* @__PURE__ */ e(z, { children: "124" })
+        /* @__PURE__ */ n(A, { $depth: 0, children: [
+          /* @__PURE__ */ e(v, { size: 16, color: "#5C6970" }),
+          /* @__PURE__ */ e(u, { style: { marginLeft: "8px" }, children: "Confluence" }),
+          /* @__PURE__ */ e($, { children: "124" })
         ] }),
-        /* @__PURE__ */ n(P, { children: [
-          /* @__PURE__ */ e(g, { children: "Content blocks" }),
-          /* @__PURE__ */ e(z, { children: "0" })
+        /* @__PURE__ */ n(T, { children: [
+          /* @__PURE__ */ e(u, { children: "Content blocks" }),
+          /* @__PURE__ */ e($, { children: "0" })
         ] }),
-        /* @__PURE__ */ n(P, { children: [
-          /* @__PURE__ */ e(g, { children: "Procedures" }),
-          /* @__PURE__ */ e(z, { children: "12" })
+        /* @__PURE__ */ n(T, { children: [
+          /* @__PURE__ */ e(u, { children: "Procedures" }),
+          /* @__PURE__ */ e($, { children: "12" })
         ] }),
-        /* @__PURE__ */ n(P, { children: [
-          /* @__PURE__ */ e(g, { children: "Media" }),
-          /* @__PURE__ */ e(z, { children: "0" })
+        /* @__PURE__ */ n(T, { children: [
+          /* @__PURE__ */ e(u, { children: "Media" }),
+          /* @__PURE__ */ e($, { children: "0" })
         ] })
       ] })
     ] })
   ] });
-}, Tn = o.div`
+}, Hn = o.div`
   display: flex;
   flex-direction: column;
   width: 240px;
@@ -659,13 +834,13 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   padding: 8px;
   overflow-y: auto;
   overflow-x: hidden;
-`, Mn = o.div`
+`, En = o.div`
   display: flex;
   gap: 8px;
   align-items: flex-start;
   padding: 12px;
   width: 100%;
-`, Bn = o.h2`
+`, Rn = o.h2`
   flex: 1;
   font-family: 'SF Pro Text', sans-serif;
   font-size: 18px;
@@ -675,7 +850,7 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   color: #293239;
   margin: 0;
   padding: 4px 0;
-`, Ce = o.button`
+`, ge = o.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -696,11 +871,11 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   &:active {
     background-color: rgba(92, 105, 112, 0.16);
   }
-`, c = o(Ce)`
+`, c = o(ge)`
   width: 24px;
   height: 24px;
   border-radius: 4px;
-`, R = o.div`
+`, q = o.div`
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -742,7 +917,7 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 0;
-`, G = o.div`
+`, F = o.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -759,11 +934,11 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   color: #2f3941;
   text-align: center;
   flex-shrink: 0;
-`, he = o.div`
+`, Z = o.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-`, ge = o.div`
+`, Y = o.div`
   display: flex;
   align-items: center;
   min-height: 40px;
@@ -779,13 +954,13 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   &:active {
     background-color: rgba(92, 105, 112, 0.16);
   }
-`, ue = o.div`
+`, _ = o.div`
   display: flex;
   flex: 1;
   gap: 8px;
   align-items: center;
   padding: 12px 4px 12px 8px;
-`, xe = o.p`
+`, ee = o.p`
   font-family: 'SF Pro Text', sans-serif;
   font-size: 12px;
   font-weight: 600;
@@ -797,36 +972,36 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   white-space: nowrap;
   margin: 0;
   flex-shrink: 0;
-`, fe = o.div`
+`, ne = o.div`
   flex: 1;
   height: 1px;
   background-color: #d8dcde;
   min-width: 0;
-`, be = o.div`
+`, ie = o.div`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 32px;
   height: 100%;
   flex-shrink: 0;
-`, Nn = () => {
-  const [i, x] = C("agents"), [t, f] = C(!0), [a, v] = C(!0), r = (T) => {
-    x(T);
+`, qn = () => {
+  const [i, g] = C("agents"), [t, x] = C(!0), [r, b] = C(!0), a = (z) => {
+    g(z);
   };
-  return /* @__PURE__ */ n(Tn, { children: [
-    /* @__PURE__ */ n(Mn, { children: [
-      /* @__PURE__ */ e(Bn, { children: "AI agents" }),
-      /* @__PURE__ */ e(Ce, { "aria-label": "Add new", children: /* @__PURE__ */ e(O, { size: 20, color: "#5C6970" }) })
+  return /* @__PURE__ */ n(Hn, { children: [
+    /* @__PURE__ */ n(En, { children: [
+      /* @__PURE__ */ e(Rn, { children: "AI agents" }),
+      /* @__PURE__ */ e(ge, { "aria-label": "Add new", children: /* @__PURE__ */ e(V, { size: 20, color: "#5C6970" }) })
     ] }),
-    /* @__PURE__ */ n(R, { children: [
+    /* @__PURE__ */ n(q, { children: [
       /* @__PURE__ */ n(
         s,
         {
           $isCurrent: i === "agents",
-          onClick: () => r("agents"),
+          onClick: () => a("agents"),
           children: [
             /* @__PURE__ */ n(d, { children: [
-              /* @__PURE__ */ e(F, { size: 20, color: i === "agents" ? "white" : "#5C6970" }),
+              /* @__PURE__ */ e(N, { size: 20, color: i === "agents" ? "white" : "#5C6970" }),
               /* @__PURE__ */ e(p, { $isCurrent: i === "agents", children: "Agents" })
             ] }),
             /* @__PURE__ */ e(c, { "aria-label": "More options", children: /* @__PURE__ */ e(l, { size: 16, color: i === "agents" ? "white" : "#5C6970" }) })
@@ -837,10 +1012,10 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
         s,
         {
           $isCurrent: i === "conversations",
-          onClick: () => r("conversations"),
+          onClick: () => a("conversations"),
           children: [
             /* @__PURE__ */ n(d, { children: [
-              /* @__PURE__ */ e(Le, { size: 20, color: "#5C6970" }),
+              /* @__PURE__ */ e(_e, { size: 20, color: "#5C6970" }),
               /* @__PURE__ */ e(p, { $isCurrent: i === "conversations", children: "Conversations" })
             ] }),
             /* @__PURE__ */ e(c, { "aria-label": "More options", children: /* @__PURE__ */ e(l, { size: 16, color: "#5C6970" }) })
@@ -851,10 +1026,10 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
         s,
         {
           $isCurrent: i === "settings",
-          onClick: () => r("settings"),
+          onClick: () => a("settings"),
           children: [
             /* @__PURE__ */ n(d, { children: [
-              /* @__PURE__ */ e(A, { size: 20, color: "#5C6970" }),
+              /* @__PURE__ */ e(P, { size: 20, color: "#5C6970" }),
               /* @__PURE__ */ e(p, { $isCurrent: i === "settings", children: "Settings" })
             ] }),
             /* @__PURE__ */ e(c, { "aria-label": "More options", children: /* @__PURE__ */ e(l, { size: 16, color: "#5C6970" }) })
@@ -862,24 +1037,24 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
         }
       )
     ] }),
-    /* @__PURE__ */ n(he, { children: [
-      /* @__PURE__ */ n(ge, { onClick: () => f(!t), children: [
-        /* @__PURE__ */ n(ue, { children: [
-          /* @__PURE__ */ e(xe, { children: "Agent Management" }),
-          /* @__PURE__ */ e(fe, {})
+    /* @__PURE__ */ n(Z, { children: [
+      /* @__PURE__ */ n(Y, { onClick: () => x(!t), children: [
+        /* @__PURE__ */ n(_, { children: [
+          /* @__PURE__ */ e(ee, { children: "Agent Management" }),
+          /* @__PURE__ */ e(ne, {})
         ] }),
-        /* @__PURE__ */ e(be, { children: t ? /* @__PURE__ */ e(q, { size: 16, color: "#5C6970" }) : /* @__PURE__ */ e(m, { size: 16, color: "#5C6970" }) })
+        /* @__PURE__ */ e(ie, { children: t ? /* @__PURE__ */ e(Q, { size: 16, color: "#5C6970" }) : /* @__PURE__ */ e(v, { size: 16, color: "#5C6970" }) })
       ] }),
-      t && /* @__PURE__ */ n(R, { children: [
+      t && /* @__PURE__ */ n(q, { children: [
         /* @__PURE__ */ n(
           s,
           {
             $isCurrent: i === "agent-builder",
-            onClick: () => r("agent-builder"),
+            onClick: () => a("agent-builder"),
             children: [
               /* @__PURE__ */ n(d, { children: [
                 /* @__PURE__ */ e(p, { $isCurrent: i === "agent-builder", children: "Agent builder" }),
-                /* @__PURE__ */ e(G, { children: "123" })
+                /* @__PURE__ */ e(F, { children: "123" })
               ] }),
               /* @__PURE__ */ e(c, { "aria-label": "More options", children: /* @__PURE__ */ e(l, { size: 16, color: "#5C6970" }) })
             ]
@@ -889,11 +1064,11 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
           s,
           {
             $isCurrent: i === "templates",
-            onClick: () => r("templates"),
+            onClick: () => a("templates"),
             children: [
               /* @__PURE__ */ n(d, { children: [
                 /* @__PURE__ */ e(p, { $isCurrent: i === "templates", children: "Templates" }),
-                /* @__PURE__ */ e(G, { children: "123" })
+                /* @__PURE__ */ e(F, { children: "123" })
               ] }),
               /* @__PURE__ */ e(c, { "aria-label": "More options", children: /* @__PURE__ */ e(l, { size: 16, color: "#5C6970" }) })
             ]
@@ -903,11 +1078,11 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
           s,
           {
             $isCurrent: i === "workflows",
-            onClick: () => r("workflows"),
+            onClick: () => a("workflows"),
             children: [
               /* @__PURE__ */ n(d, { children: [
                 /* @__PURE__ */ e(p, { $isCurrent: i === "workflows", children: "Workflows" }),
-                /* @__PURE__ */ e(G, { children: "123" })
+                /* @__PURE__ */ e(F, { children: "123" })
               ] }),
               /* @__PURE__ */ e(c, { "aria-label": "More options", children: /* @__PURE__ */ e(l, { size: 16, color: "#5C6970" }) })
             ]
@@ -917,11 +1092,11 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
           s,
           {
             $isCurrent: i === "monitoring",
-            onClick: () => r("monitoring"),
+            onClick: () => a("monitoring"),
             children: [
               /* @__PURE__ */ n(d, { children: [
                 /* @__PURE__ */ e(p, { $isCurrent: i === "monitoring", children: "Monitoring" }),
-                /* @__PURE__ */ e(G, { children: "123" })
+                /* @__PURE__ */ e(F, { children: "123" })
               ] }),
               /* @__PURE__ */ e(c, { "aria-label": "More options", children: /* @__PURE__ */ e(l, { size: 16, color: "#5C6970" }) })
             ]
@@ -931,11 +1106,11 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
           s,
           {
             $isCurrent: i === "permissions",
-            onClick: () => r("permissions"),
+            onClick: () => a("permissions"),
             children: [
               /* @__PURE__ */ n(d, { children: [
                 /* @__PURE__ */ e(p, { $isCurrent: i === "permissions", children: "Permissions" }),
-                /* @__PURE__ */ e(G, { children: "123" })
+                /* @__PURE__ */ e(F, { children: "123" })
               ] }),
               /* @__PURE__ */ e(c, { "aria-label": "More options", children: /* @__PURE__ */ e(l, { size: 16, color: "#5C6970" }) })
             ]
@@ -943,20 +1118,20 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
         )
       ] })
     ] }),
-    /* @__PURE__ */ n(he, { children: [
-      /* @__PURE__ */ n(ge, { onClick: () => v(!a), children: [
-        /* @__PURE__ */ n(ue, { children: [
-          /* @__PURE__ */ e(xe, { children: "Data & Integration" }),
-          /* @__PURE__ */ e(fe, {})
+    /* @__PURE__ */ n(Z, { children: [
+      /* @__PURE__ */ n(Y, { onClick: () => b(!r), children: [
+        /* @__PURE__ */ n(_, { children: [
+          /* @__PURE__ */ e(ee, { children: "Data & Integration" }),
+          /* @__PURE__ */ e(ne, {})
         ] }),
-        /* @__PURE__ */ e(be, { children: a ? /* @__PURE__ */ e(q, { size: 16, color: "#5C6970" }) : /* @__PURE__ */ e(m, { size: 16, color: "#5C6970" }) })
+        /* @__PURE__ */ e(ie, { children: r ? /* @__PURE__ */ e(Q, { size: 16, color: "#5C6970" }) : /* @__PURE__ */ e(v, { size: 16, color: "#5C6970" }) })
       ] }),
-      a && /* @__PURE__ */ n(R, { children: [
+      r && /* @__PURE__ */ n(q, { children: [
         /* @__PURE__ */ n(
           s,
           {
             $isCurrent: i === "data-sources",
-            onClick: () => r("data-sources"),
+            onClick: () => a("data-sources"),
             children: [
               /* @__PURE__ */ e(d, { children: /* @__PURE__ */ e(p, { $isCurrent: i === "data-sources", children: "Data sources" }) }),
               /* @__PURE__ */ e(c, { "aria-label": "More options", children: /* @__PURE__ */ e(l, { size: 16, color: "#5C6970" }) })
@@ -967,7 +1142,7 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
           s,
           {
             $isCurrent: i === "knowledge-base",
-            onClick: () => r("knowledge-base"),
+            onClick: () => a("knowledge-base"),
             children: [
               /* @__PURE__ */ e(d, { children: /* @__PURE__ */ e(p, { $isCurrent: i === "knowledge-base", children: "Knowledge base" }) }),
               /* @__PURE__ */ e(c, { "aria-label": "More options", children: /* @__PURE__ */ e(l, { size: 16, color: "#5C6970" }) })
@@ -978,7 +1153,7 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
           s,
           {
             $isCurrent: i === "integrations",
-            onClick: () => r("integrations"),
+            onClick: () => a("integrations"),
             children: [
               /* @__PURE__ */ e(d, { children: /* @__PURE__ */ e(p, { $isCurrent: i === "integrations", children: "Integrations" }) }),
               /* @__PURE__ */ e(c, { "aria-label": "More options", children: /* @__PURE__ */ e(l, { size: 16, color: "#5C6970" }) })
@@ -989,7 +1164,7 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
           s,
           {
             $isCurrent: i === "api-connections",
-            onClick: () => r("api-connections"),
+            onClick: () => a("api-connections"),
             children: [
               /* @__PURE__ */ e(d, { children: /* @__PURE__ */ e(p, { $isCurrent: i === "api-connections", children: "API connections" }) }),
               /* @__PURE__ */ e(c, { "aria-label": "More options", children: /* @__PURE__ */ e(l, { size: 16, color: "#5C6970" }) })
@@ -1000,7 +1175,7 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
           s,
           {
             $isCurrent: i === "webhooks",
-            onClick: () => r("webhooks"),
+            onClick: () => a("webhooks"),
             children: [
               /* @__PURE__ */ e(d, { children: /* @__PURE__ */ e(p, { $isCurrent: i === "webhooks", children: "Webhooks" }) }),
               /* @__PURE__ */ e(c, { "aria-label": "More options", children: /* @__PURE__ */ e(l, { size: 16, color: "#5C6970" }) })
@@ -1011,7 +1186,7 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
           s,
           {
             $isCurrent: i === "logs",
-            onClick: () => r("logs"),
+            onClick: () => a("logs"),
             children: [
               /* @__PURE__ */ e(d, { children: /* @__PURE__ */ e(p, { $isCurrent: i === "logs", children: "Logs" }) }),
               /* @__PURE__ */ e(c, { "aria-label": "More options", children: /* @__PURE__ */ e(l, { size: 16, color: "#5C6970" }) })
@@ -1021,95 +1196,95 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
       ] })
     ] })
   ] });
-}, Gn = o.div`
+}, Qn = o.div`
   flex: 1;
   width: 100%;
   padding: 24px;
   overflow: auto;
-`, Fn = () => /* @__PURE__ */ n(Gn, { children: [
-  /* @__PURE__ */ e(u, { tag: "h1", style: { marginBottom: "16px" }, children: "Support's main content area" }),
+`, On = () => /* @__PURE__ */ n(Qn, { children: [
+  /* @__PURE__ */ e(f, { tag: "h1", style: { marginBottom: "16px" }, children: "Support's main content area" }),
   /* @__PURE__ */ e("p", { children: "This is where your Support page content will be displayed." })
-] }), jn = o.div`
+] }), Vn = o.div`
   flex: 1;
   width: 100%;
   padding: 24px;
   overflow: auto;
-`, Dn = () => /* @__PURE__ */ n(jn, { children: [
-  /* @__PURE__ */ e(u, { tag: "h1", style: { marginBottom: "16px" }, children: "Knowledge's main content area" }),
+`, Jn = () => /* @__PURE__ */ n(Vn, { children: [
+  /* @__PURE__ */ e(f, { tag: "h1", style: { marginBottom: "16px" }, children: "Knowledge's main content area" }),
   /* @__PURE__ */ e("p", { children: "This is where your Knowledge page content will be displayed." })
-] }), Ln = o.div`
+] }), Un = o.div`
   flex: 1;
   width: 100%;
   padding: 24px;
   overflow: auto;
-`, Wn = () => /* @__PURE__ */ n(Ln, { children: [
-  /* @__PURE__ */ e(u, { tag: "h1", style: { marginBottom: "16px" }, children: "AI agents's main content area" }),
+`, Xn = () => /* @__PURE__ */ n(Un, { children: [
+  /* @__PURE__ */ e(f, { tag: "h1", style: { marginBottom: "16px" }, children: "AI agents's main content area" }),
   /* @__PURE__ */ e("p", { children: "This is where your AI agents page content will be displayed." })
-] }), En = o.div`
+] }), Zn = o.div`
   flex: 1;
   width: 100%;
   padding: 24px;
   overflow: auto;
-`, Hn = () => /* @__PURE__ */ n(En, { children: [
-  /* @__PURE__ */ e(u, { tag: "h1", style: { marginBottom: "16px" }, children: "Chat's main content area" }),
+`, Yn = () => /* @__PURE__ */ n(Zn, { children: [
+  /* @__PURE__ */ e(f, { tag: "h1", style: { marginBottom: "16px" }, children: "Chat's main content area" }),
   /* @__PURE__ */ e("p", { children: "This is where your Chat page content will be displayed." })
-] }), Kn = o.div`
+] }), _n = o.div`
   flex: 1;
   width: 100%;
   padding: 24px;
   overflow: auto;
-`, Rn = () => /* @__PURE__ */ n(Kn, { children: [
-  /* @__PURE__ */ e(u, { tag: "h1", style: { marginBottom: "16px" }, children: "Voice's main content area" }),
+`, ei = () => /* @__PURE__ */ n(_n, { children: [
+  /* @__PURE__ */ e(f, { tag: "h1", style: { marginBottom: "16px" }, children: "Voice's main content area" }),
   /* @__PURE__ */ e("p", { children: "This is where your Voice page content will be displayed." })
-] }), qn = o.div`
+] }), ni = o.div`
   flex: 1;
   width: 100%;
   padding: 24px;
   overflow: auto;
-`, Qn = () => /* @__PURE__ */ n(qn, { children: [
-  /* @__PURE__ */ e(u, { tag: "h1", style: { marginBottom: "16px" }, children: "Analytics's main content area" }),
+`, ii = () => /* @__PURE__ */ n(ni, { children: [
+  /* @__PURE__ */ e(f, { tag: "h1", style: { marginBottom: "16px" }, children: "Analytics's main content area" }),
   /* @__PURE__ */ e("p", { children: "This is where your Analytics page content will be displayed." })
-] }), On = o.div`
+] }), oi = o.div`
   flex: 1;
   width: 100%;
   padding: 24px;
   overflow: auto;
-`, Vn = () => /* @__PURE__ */ n(On, { children: [
-  /* @__PURE__ */ e(u, { tag: "h1", style: { marginBottom: "16px" }, children: "Workforce management's main content area" }),
+`, ti = () => /* @__PURE__ */ n(oi, { children: [
+  /* @__PURE__ */ e(f, { tag: "h1", style: { marginBottom: "16px" }, children: "Workforce management's main content area" }),
   /* @__PURE__ */ e("p", { children: "This is where your Workforce management page content will be displayed." })
-] }), Jn = o.div`
+] }), ri = o.div`
   flex: 1;
   width: 100%;
   padding: 24px;
   overflow: auto;
-`, Un = () => /* @__PURE__ */ n(Jn, { children: [
-  /* @__PURE__ */ e(u, { tag: "h1", style: { marginBottom: "16px" }, children: "Quality assurance's main content area" }),
+`, ai = () => /* @__PURE__ */ n(ri, { children: [
+  /* @__PURE__ */ e(f, { tag: "h1", style: { marginBottom: "16px" }, children: "Quality assurance's main content area" }),
   /* @__PURE__ */ e("p", { children: "This is where your Quality assurance page content will be displayed." })
-] }), Xn = o.div`
+] }), li = o.div`
   flex: 1;
   width: 100%;
   padding: 24px;
   overflow: auto;
-`, Zn = () => /* @__PURE__ */ n(Xn, { children: [
-  /* @__PURE__ */ e(u, { tag: "h1", style: { marginBottom: "16px" }, children: "Community's main content area" }),
+`, ci = () => /* @__PURE__ */ n(li, { children: [
+  /* @__PURE__ */ e(f, { tag: "h1", style: { marginBottom: "16px" }, children: "Community's main content area" }),
   /* @__PURE__ */ e("p", { children: "This is where your Community page content will be displayed." })
-] }), Yn = o.div`
+] }), si = o.div`
   flex: 1;
   width: 100%;
   padding: 24px;
   overflow: auto;
-`, _n = () => /* @__PURE__ */ n(Yn, { children: [
-  /* @__PURE__ */ e(u, { tag: "h1", style: { marginBottom: "16px" }, children: "Sales's main content area" }),
+`, di = () => /* @__PURE__ */ n(si, { children: [
+  /* @__PURE__ */ e(f, { tag: "h1", style: { marginBottom: "16px" }, children: "Sales's main content area" }),
   /* @__PURE__ */ e("p", { children: "This is where your Sales page content will be displayed." })
-] }), ei = o.div`
+] }), pi = o.div`
   flex: 1;
   width: 100%;
   padding: 24px;
   overflow: auto;
-`, ni = () => /* @__PURE__ */ n(ei, { children: [
-  /* @__PURE__ */ e(u, { tag: "h1", style: { marginBottom: "16px" }, children: "Admin center's main content area" }),
+`, hi = () => /* @__PURE__ */ n(pi, { children: [
+  /* @__PURE__ */ e(f, { tag: "h1", style: { marginBottom: "16px" }, children: "Admin center's main content area" }),
   /* @__PURE__ */ e("p", { children: "This is where your Admin center page content will be displayed." })
-] }), ii = o.div`
+] }), gi = o.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -1117,101 +1292,15 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   background-color: #f8f9f9;
   position: relative;
   isolation: isolate;
-`, oi = o.div`
+`, xi = o.div`
   display: flex;
   flex: 1;
   width: 100%;
   z-index: 1;
   overflow: hidden;
-`, ti = o.div`
+`, ui = o.div`
   display: flex;
-`, ri = o.nav`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 56px;
-  height: 100%;
-  padding: 12px 0;
-  background-color: #f8f9f9;
-  position: relative;
-`, ai = o.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 231px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(92, 105, 112, 0.08));
-  pointer-events: none;
-`, li = o.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  z-index: 1;
-`, ci = o.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 48px;
-`, si = o.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border: none;
-  background-color: ${(i) => i.$isActive ? "#293239" : "transparent"};
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  padding: 0;
-
-  &:hover {
-    background-color: ${(i) => i.$isActive ? "#293239" : "rgba(0, 0, 0, 0.08)"};
-  }
-`, di = o.div`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-  z-index: 1;
-`, pi = o.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 56px;
-  height: 48px;
-  padding: 0 16px;
-`, hi = o.div`
-  width: 23px;
-  height: 1px;
-  background-color: #d8dcde;
-`, gi = o.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border: none;
-  background-color: white;
-  border-radius: 24px;
-  cursor: pointer;
-  transition: all 0.15s;
-  padding: 0;
-  box-shadow: 0px 4px 8px 0px rgba(10, 13, 14, 0.16);
-
-  &:hover {
-    background-color: rgba(92, 105, 112, 0.08);
-  }
-
-  &:active {
-    background-color: rgba(92, 105, 112, 0.16);
-  }
-`, ui = o.main`
+`, fi = o.main`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -1224,138 +1313,67 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   border-radius: 8px 0px 0px 0px;
   flex: 1;
   align-self: stretch;
-`, yi = () => {
-  const [i, x] = C(0), [t, f] = C("support"), [a, v] = C(!1), r = (h) => {
-    f(h), x(0), v(!1);
-  }, D = t === "admin-center" ? [
-    { id: 0, icon: E, label: "Home" },
-    { id: 1, icon: ie, label: "Account" },
-    { id: 2, icon: oe, label: "People" },
-    { id: 3, icon: We, label: "Channels" },
-    { id: 4, icon: Ee, label: "AI" },
-    { id: 5, icon: He, label: "Workspaces" },
-    { id: 6, icon: Ke, label: "Objects & rules" },
-    { id: 7, icon: Re, label: "Apps and integrations" }
-  ] : t === "knowledge" ? [
-    { id: 0, icon: E, label: "Home" },
-    { id: 1, icon: qe, label: "Knowledge" },
-    { id: 2, icon: Qe, label: "Moderate content" },
-    { id: 3, icon: Oe, label: "Arrange content" },
-    { id: 4, icon: Ve, label: "Customize design" },
-    { id: 5, icon: te, label: "User permissions" },
-    { id: 6, icon: A, label: "Settings" }
-  ] : t === "ai-agents" ? [
-    { id: 0, icon: F, label: "Analytics" },
-    { id: 1, icon: Je, label: "Content" },
-    { id: 2, icon: re, label: "Conversations" },
-    { id: 3, icon: A, label: "Settings" },
-    { id: 4, icon: null, label: "separator" },
-    // Separator
-    { id: 5, icon: Ue, label: "AI agent management" },
-    { id: 6, icon: te, label: "Permissions" },
-    { id: 7, icon: ae, label: "Database" },
-    { id: 8, icon: Xe, label: "Apps" },
-    { id: 9, icon: Ze, label: "Integrations" }
-  ] : t === "analytics" ? [
-    { id: 0, icon: le, label: "Real-time monitoring" },
-    { id: 1, icon: ce, label: "Dashboard" },
-    { id: 2, icon: F, label: "Reports" },
-    { id: 3, icon: ae, label: "Data" },
-    { id: 4, icon: Ye, label: "Export" },
-    { id: 5, icon: A, label: "Settings" }
-  ] : t === "quality-assurance" ? [
-    { id: 0, icon: ce, label: "Dashboard" },
-    { id: 1, icon: re, label: "Conversations" },
-    { id: 2, icon: _e, label: "Reviews" },
-    { id: 3, icon: se, label: "Inbox" },
-    { id: 4, icon: en, label: "Training" }
-  ] : t === "workforce-management" ? [
-    { id: 0, icon: le, label: "Real-time monitoring" },
-    { id: 1, icon: F, label: "Analytics" },
-    { id: 2, icon: nn, label: "Forecasting" },
-    { id: 3, icon: on, label: "Scheduling" },
-    { id: 4, icon: oe, label: "Team" },
-    { id: 5, icon: A, label: "Settings" }
-  ] : [
-    { id: 0, icon: E, label: "Home" },
-    { id: 1, icon: se, label: "Inbox" },
-    { id: 2, icon: tn, label: "Contacts" },
-    { id: 3, icon: ie, label: "Organization" },
-    { id: 4, icon: rn, label: "Custom Objects" },
-    { id: 5, icon: F, label: "Analytics" },
-    { id: 6, icon: A, label: "Settings" }
-  ], Y = t === "knowledge", _ = t === "ai-agents", we = Y || _;
-  return /* @__PURE__ */ e(Ie, { children: /* @__PURE__ */ n(ii, { children: [
+`, Ii = () => {
+  const [i, g] = C(0), [t, x] = C("support"), [r, b] = C(!1);
+  return /* @__PURE__ */ e(me, { children: /* @__PURE__ */ n(gi, { children: [
     /* @__PURE__ */ e(
-      mn,
+      hn,
       {
         currentProduct: t,
-        onProductChange: r
+        onProductChange: (h) => {
+          x(h), g(0), b(!1);
+        }
       }
     ),
-    /* @__PURE__ */ n(oi, { children: [
-      /* @__PURE__ */ n(ti, { children: [
-        /* @__PURE__ */ n(ri, { children: [
-          /* @__PURE__ */ e(ai, {}),
-          /* @__PURE__ */ e(li, { children: D.map((h) => {
-            if (h.label === "separator")
-              return /* @__PURE__ */ e(pi, { children: /* @__PURE__ */ e(hi, {}) }, h.id);
-            const ee = i === h.id, ne = typeof h.icon == "function" ? h.icon : null;
-            return /* @__PURE__ */ e(ci, { children: /* @__PURE__ */ e(
-              si,
-              {
-                $isActive: ee,
-                onClick: () => x(h.id),
-                "aria-label": h.label,
-                children: ne ? /* @__PURE__ */ e(ne, { size: 20, color: ee ? "white" : "#5C6970" }) : h.icon
-              }
-            ) }, h.id);
-          }) }),
-          /* @__PURE__ */ e(di, { children: we && /* @__PURE__ */ e(
-            gi,
-            {
-              onClick: () => v(!a),
-              "aria-label": a ? "Collapse" : "Expand",
-              children: /* @__PURE__ */ e(an, { size: 20, color: "#5C6970" })
-            }
-          ) })
-        ] }),
-        Y && a && /* @__PURE__ */ e(Pn, {}),
-        _ && a && /* @__PURE__ */ e(Nn, {})
-      ] }),
+    /* @__PURE__ */ n(xi, { children: [
       /* @__PURE__ */ n(ui, { children: [
-        t === "support" && /* @__PURE__ */ e(Fn, {}),
-        t === "knowledge" && /* @__PURE__ */ e(Dn, {}),
-        t === "ai-agents" && /* @__PURE__ */ e(Wn, {}),
-        t === "chat" && /* @__PURE__ */ e(Hn, {}),
-        t === "voice" && /* @__PURE__ */ e(Rn, {}),
-        t === "analytics" && /* @__PURE__ */ e(Qn, {}),
-        t === "workforce-management" && /* @__PURE__ */ e(Vn, {}),
-        t === "quality-assurance" && /* @__PURE__ */ e(Un, {}),
-        t === "community" && /* @__PURE__ */ e(Zn, {}),
-        t === "sales" && /* @__PURE__ */ e(_n, {}),
-        t === "admin-center" && /* @__PURE__ */ e(ni, {})
+        /* @__PURE__ */ e(
+          Tn,
+          {
+            currentProduct: t,
+            activeNavItem: i,
+            setActiveNavItem: g,
+            isSubnavExpanded: r,
+            setIsSubnavExpanded: b
+          }
+        ),
+        t === "knowledge" && r && /* @__PURE__ */ e(Wn, {}),
+        t === "ai-agents" && r && /* @__PURE__ */ e(qn, {})
+      ] }),
+      /* @__PURE__ */ n(fi, { children: [
+        t === "support" && /* @__PURE__ */ e(On, {}),
+        t === "knowledge" && /* @__PURE__ */ e(Jn, {}),
+        t === "ai-agents" && /* @__PURE__ */ e(Xn, {}),
+        t === "chat" && /* @__PURE__ */ e(Yn, {}),
+        t === "voice" && /* @__PURE__ */ e(ei, {}),
+        t === "analytics" && /* @__PURE__ */ e(ii, {}),
+        t === "workforce-management" && /* @__PURE__ */ e(ti, {}),
+        t === "quality-assurance" && /* @__PURE__ */ e(ai, {}),
+        t === "community" && /* @__PURE__ */ e(ci, {}),
+        t === "sales" && /* @__PURE__ */ e(di, {}),
+        t === "admin-center" && /* @__PURE__ */ e(hi, {})
       ] })
     ] })
   ] }) });
 };
 export {
-  Wn as A,
-  Hn as C,
-  yi as G,
-  Dn as K,
-  dn as P,
-  Un as Q,
-  _n as S,
-  mn as T,
-  Rn as V,
-  Vn as W,
-  Nn as a,
-  ni as b,
-  Qn as c,
-  Zn as d,
-  Pn as e,
-  Fn as f,
-  Q as p
+  Xn as A,
+  Yn as C,
+  Ii as G,
+  Jn as K,
+  Tn as M,
+  tn as P,
+  ai as Q,
+  di as S,
+  hn as T,
+  ei as V,
+  ti as W,
+  qn as a,
+  hi as b,
+  ii as c,
+  ci as d,
+  Wn as e,
+  On as f,
+  O as p
 };
-//# sourceMappingURL=GlobalNavPageTemplate-y3tcxAfd.js.map
+//# sourceMappingURL=GlobalNavPageTemplate-ndy_yi1j.js.map
