@@ -19,9 +19,10 @@ This skill automates setting up a new React project with the `zendesk-globalnav-
 2. Installs React 18 (required for Garden compatibility)
 3. Installs all peer dependencies (styled-components, Garden components)
 4. Installs `zendesk-globalnav-template` from GitHub
-5. Sets up App.jsx to use GlobalNavPageTemplate
-6. Fixes default Vite CSS conflicts
-7. Starts the dev server
+5. Copies Claude skills to the project for future use
+6. Sets up App.jsx to use GlobalNavPageTemplate
+7. Fixes default Vite CSS conflicts
+8. Starts the dev server
 
 ## Instructions
 
@@ -69,7 +70,19 @@ Install the GlobalNav template package:
 npm install git+https://github.com/nicaelar/zendesk-globalnav-template.git
 ```
 
-### Step 4: Set Up App.jsx
+### Step 4: Copy Claude Skills
+
+Copy the included Claude skills to the project so they're available for future use:
+```bash
+mkdir -p .claude/skills
+cp node_modules/zendesk-globalnav-template/.claude/skills/*.claude.md .claude/skills/
+```
+
+This makes the following skills available in the new project:
+- `/globalnav-start` - Set up a new project with the GlobalNav template
+- `/build-main-content` - Scaffold main content components
+
+### Step 5: Set Up App.jsx
 
 Replace `src/App.jsx` with:
 
@@ -84,7 +97,7 @@ function App() {
 export default App
 ```
 
-### Step 5: Fix CSS Conflicts
+### Step 6: Fix CSS Conflicts
 
 Update `src/App.css` to remove padding conflicts:
 
@@ -111,7 +124,7 @@ body {
 
 Keep the rest of the CSS as-is.
 
-### Step 6: Create Usage Examples
+### Step 7: Create Usage Examples
 
 Create `src/AppTreeShaking.jsx` for tree-shaking example:
 
@@ -139,7 +152,7 @@ function AppTreeShaking() {
 export default AppTreeShaking
 ```
 
-### Step 7: Create README
+### Step 8: Create README
 
 Create a `GLOBALNAV_USAGE.md` file:
 
@@ -307,19 +320,20 @@ npm install git+https://github.com/nicaelar/zendesk-globalnav-template.git#v0.1.
 \`\`\`
 ```
 
-### Step 8: Start Dev Server
+### Step 9: Start Dev Server
 
 ```bash
 npm run dev
 ```
 
-### Step 9: Inform the User
+### Step 10: Inform the User
 
 Tell the user:
 
 ✅ Project created successfully!
 ✅ All dependencies installed
 ✅ GlobalNav template configured
+✅ Claude skills copied to project
 ✅ Dev server running at the URL shown
 
 **What's available:**
@@ -327,6 +341,10 @@ Tell the user:
 - 4 components: GlobalNavPageTemplate, TopBar, KnowledgeSubnav, ProductTrayDropdown
 - 37 icons available for import
 - Tree-shaking example in src/AppTreeShaking.jsx
+
+**Claude skills available:**
+- `/globalnav-start` - Set up a new project (this skill)
+- `/build-main-content` - Scaffold main content components
 
 **To test tree-shaking:**
 Change src/main.jsx to import AppTreeShaking instead of App
