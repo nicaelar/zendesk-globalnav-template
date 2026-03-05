@@ -166,14 +166,18 @@ const CollapseButton = styled.button`
 `;
 
 const MainContent = styled.main`
+  box-sizing: border-box;
   display: flex;
-  flex: 1;
   flex-direction: column;
-  background-color: white;
-  border: 1px solid transparent;
-  border-top-left-radius: 8px;
-  box-shadow: 0px 0px 4px 0px rgba(10, 13, 14, 0.16);
-  overflow: hidden;
+  align-items: flex-start;
+  padding: 0px;
+  margin-top: 4px;
+  isolation: isolate;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(10, 13, 14, 0.16);
+  border-radius: 8px 0px 0px 0px;
+  flex: 1;
+  align-self: stretch;
 `;
 
 const ContentArea = styled.div`
