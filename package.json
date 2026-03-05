@@ -20,6 +20,11 @@
     "./icons": {
       "import": "./dist/icons.js",
       "require": "./dist/icons.cjs"
+    },
+    "./mainContent": {
+      "types": "./dist/mainContent.d.ts",
+      "import": "./dist/mainContent.js",
+      "require": "./dist/mainContent.cjs"
     }
   },
   "files": [
@@ -84,5 +89,8 @@
     "vite": "^7.3.1",
     "vite-plugin-dts": "^4.5.4",
     "vite-plugin-svgr": "^4.5.0"
+  },
+  "dependencies": {
+    "zendesk-globalnav-template": "github:nicaelar/zendesk-globalnav-template"
   }
 }

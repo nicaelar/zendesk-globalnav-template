@@ -1,0 +1,12 @@
+// Main Content Components Export
+export { SupportMainContent } from '../components/mainContent/SupportMainContent'
+export { KnowledgeMainContent } from '../components/mainContent/KnowledgeMainContent'
+export { AIAgentsMainContent } from '../components/mainContent/AIAgentsMainContent'
+export { ChatMainContent } from '../components/mainContent/ChatMainContent'
+export { VoiceMainContent } from '../components/mainContent/VoiceMainContent'
+export { AnalyticsMainContent } from '../components/mainContent/AnalyticsMainContent'
+export { WorkforceManagementMainContent } from '../components/mainContent/WorkforceManagementMainContent'
+export { QualityAssuranceMainContent } from '../components/mainContent/QualityAssuranceMainContent'
+export { CommunityMainContent } from '../components/mainContent/CommunityMainContent'
+export { SalesMainContent } from '../components/mainContent/SalesMainContent'
+export { AdminCenterMainContent } from '../components/mainContent/AdminCenterMainContent'

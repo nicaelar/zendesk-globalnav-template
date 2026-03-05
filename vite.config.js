@@ -21,7 +21,8 @@ export default defineConfig({
       entry: {
         index: resolve(process.cwd(), 'src/lib/index.js'),
         components: resolve(process.cwd(), 'src/lib/components.js'),
-        icons: resolve(process.cwd(), 'src/lib/icons.js')
+        icons: resolve(process.cwd(), 'src/lib/icons.js'),
+        mainContent: resolve(process.cwd(), 'src/lib/mainContent.js')
       },
       formats: ['es', 'cjs'],
       fileName: (format, entryName) =>

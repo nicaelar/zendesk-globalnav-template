@@ -39,7 +39,6 @@ import {
 const Nav = styled.nav`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
   width: 56px;
   height: 100%;
