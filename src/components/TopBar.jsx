@@ -21,7 +21,7 @@ import {
   RescueRingIcon,
   PersonIcon,
   EarthIcon,
-  SparkleIcon,
+  RocketIcon,
 } from '../icons/GlobalNavIcons';
 import { ProductTrayDropdown, products } from './ProductTrayDropdown';
 
@@ -512,7 +512,7 @@ export const TopBar = ({ currentProduct = 'support', onProductChange }) => {
               </IconButton>
 
               <IconButton>
-                <SparkleIcon size={20} />
+                <RocketIcon size={20} />
               </IconButton>
 
               <Avatar size="small" backgroundColor="#f8f9f9">
