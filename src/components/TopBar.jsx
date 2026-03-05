@@ -20,6 +20,7 @@ import {
   BellIcon,
   RescueRingIcon,
   PersonIcon,
+  EarthIcon,
 } from '../icons/GlobalNavIcons';
 import { ProductTrayDropdown, products } from './ProductTrayDropdown';
 
@@ -309,6 +310,10 @@ export const TopBar = ({ currentProduct = 'support', onProductChange }) => {
   const currentProductData = products.find(p => p.id === currentProduct) || products[0];
   const isAdminCenter = currentProduct === 'admin-center';
   const isKnowledge = currentProduct === 'knowledge';
+  const isAIAgents = currentProduct === 'ai-agents';
+  const isWorkforceManagement = currentProduct === 'workforce-management';
+  const isQualityAssurance = currentProduct === 'quality-assurance';
+  const isAnalytics = currentProduct === 'analytics';
 
   return (
     <TopBarContainer>
@@ -382,6 +387,85 @@ export const TopBar = ({ currentProduct = 'support', onProductChange }) => {
               <IconButton>
                 <RescueRingIcon size={20} />
               </IconButton>
+
+              <Avatar size="small" backgroundColor="#f8f9f9">
+                <PersonIcon size={16} color="#5C6970" />
+              </Avatar>
+            </RightContent>
+          </>
+        ) : isAIAgents ? (
+          // AI Agents Header
+          <>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Separator>
+                <SeparatorLine />
+              </Separator>
+              <WorkspaceName>Camera obscura</WorkspaceName>
+            </div>
+
+            <RightContent>
+              <ProductTray>
+                <span style={{ fontSize: '12px', fontWeight: 600, lineHeight: '16px', letterSpacing: '-0.0004px', color: '#293239' }}>
+                  Test bot
+                </span>
+                <ChevronDownIcon size={12} />
+              </ProductTray>
+
+              <IconButton>
+                <RescueRingIcon size={20} />
+              </IconButton>
+
+              <Avatar size="small" backgroundColor="#f8f9f9">
+                <PersonIcon size={16} color="#5C6970" />
+              </Avatar>
+            </RightContent>
+          </>
+        ) : isWorkforceManagement ? (
+          // Workforce Management Header
+          <>
+            <div />
+
+            <RightContent>
+              <SearchInput>
+                <MagnifyingGlassIcon size={16} />
+                <span>Search</span>
+              </SearchInput>
+
+              <IconButton>
+                <EarthIcon size={20} />
+              </IconButton>
+
+              <Avatar size="small" backgroundColor="#f8f9f9">
+                <PersonIcon size={16} color="#5C6970" />
+              </Avatar>
+            </RightContent>
+          </>
+        ) : isQualityAssurance ? (
+          // Quality Assurance Header
+          <>
+            <div />
+
+            <RightContent>
+              <SearchInput>
+                <MagnifyingGlassIcon size={16} />
+                <span>Search</span>
+              </SearchInput>
+
+              <Avatar size="small" backgroundColor="#f8f9f9">
+                <PersonIcon size={16} color="#5C6970" />
+              </Avatar>
+            </RightContent>
+          </>
+        ) : isAnalytics ? (
+          // Analytics Header
+          <>
+            <div />
+
+            <RightContent>
+              <SearchInput>
+                <MagnifyingGlassIcon size={16} />
+                <span>Search</span>
+              </SearchInput>
 
               <Avatar size="small" backgroundColor="#f8f9f9">
                 <PersonIcon size={16} color="#5C6970" />

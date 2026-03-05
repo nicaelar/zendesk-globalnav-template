@@ -8,6 +8,7 @@ import {
   BuildingIcon,
   ShapesIcon,
   BarChartSquareIcon,
+  LineGraphSquareIcon,
   GearIcon,
   PeopleIcon,
   PaperPlaneIcon,
@@ -21,9 +22,22 @@ import {
   PaletteIcon,
   PersonKeyIcon,
   SidebarIcon,
+  NotePencilIcon,
+  BubblesIcon,
+  WrenchIcon,
+  DatabaseIcon,
+  SquareGridCircleIcon,
+  PlugIcon,
+  LayoutGridIcon,
+  CloudArrowDownIcon,
+  CheckSquareIcon,
+  GraduateCapIcon,
+  CloudSunIcon,
+  CalendarIcon,
 } from '../icons/GlobalNavIcons';
 import { TopBar } from './TopBar';
 import { KnowledgeSubnav } from './KnowledgeSubnav';
+import { AIAgentsSubnav } from './AIAgentsSubnav';
 
 // Styled Components
 const PageContainer = styled.div`
@@ -114,6 +128,20 @@ const NavBottom = styled.div`
   z-index: 1;
 `;
 
+const NavSeparator = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 56px;
+  padding: 8px 16px;
+`;
+
+const NavSeparatorLine = styled.div`
+  width: 23px;
+  height: 1px;
+  background-color: #d8dcde;
+`;
+
 const CollapseButton = styled.button`
   display: flex;
   align-items: center;
@@ -198,12 +226,57 @@ export const GlobalNavPageTemplate = () => {
     { id: 6, icon: GearIcon, label: 'Settings' },
   ];
 
+  const aiAgentsNavItems = [
+    { id: 0, icon: BarChartSquareIcon, label: 'Analytics' },
+    { id: 1, icon: NotePencilIcon, label: 'Content' },
+    { id: 2, icon: BubblesIcon, label: 'Conversations' },
+    { id: 3, icon: GearIcon, label: 'Settings' },
+    { id: 4, icon: null, label: 'separator' }, // Separator
+    { id: 5, icon: WrenchIcon, label: 'AI agent management' },
+    { id: 6, icon: PersonKeyIcon, label: 'Permissions' },
+    { id: 7, icon: DatabaseIcon, label: 'Database' },
+    { id: 8, icon: SquareGridCircleIcon, label: 'Apps' },
+    { id: 9, icon: PlugIcon, label: 'Integrations' },
+  ];
+
+  const analyticsNavItems = [
+    { id: 0, icon: LineGraphSquareIcon, label: 'Real-time monitoring' },
+    { id: 1, icon: LayoutGridIcon, label: 'Dashboard' },
+    { id: 2, icon: BarChartSquareIcon, label: 'Reports' },
+    { id: 3, icon: DatabaseIcon, label: 'Data' },
+    { id: 4, icon: CloudArrowDownIcon, label: 'Export' },
+    { id: 5, icon: GearIcon, label: 'Settings' },
+  ];
+
+  const qualityAssuranceNavItems = [
+    { id: 0, icon: LayoutGridIcon, label: 'Dashboard' },
+    { id: 1, icon: BubblesIcon, label: 'Conversations' },
+    { id: 2, icon: CheckSquareIcon, label: 'Reviews' },
+    { id: 3, icon: InboxIcon, label: 'Inbox' },
+    { id: 4, icon: GraduateCapIcon, label: 'Training' },
+  ];
+
+  const workforceManagementNavItems = [
+    { id: 0, icon: LineGraphSquareIcon, label: 'Real-time monitoring' },
+    { id: 1, icon: BarChartSquareIcon, label: 'Analytics' },
+    { id: 2, icon: CloudSunIcon, label: 'Forecasting' },
+    { id: 3, icon: CalendarIcon, label: 'Scheduling' },
+    { id: 4, icon: PeopleIcon, label: 'Team' },
+    { id: 5, icon: GearIcon, label: 'Settings' },
+  ];
+
   const navItems =
     currentProduct === 'admin-center' ? adminCenterNavItems :
     currentProduct === 'knowledge' ? knowledgeNavItems :
+    currentProduct === 'ai-agents' ? aiAgentsNavItems :
+    currentProduct === 'analytics' ? analyticsNavItems :
+    currentProduct === 'quality-assurance' ? qualityAssuranceNavItems :
+    currentProduct === 'workforce-management' ? workforceManagementNavItems :
     defaultNavItems;
 
   const isKnowledge = currentProduct === 'knowledge';
+  const isAIAgents = currentProduct === 'ai-agents';
+  const showSubnav = isKnowledge || isAIAgents;
 
   return (
     <ThemeProvider>
@@ -220,6 +293,15 @@ export const GlobalNavPageTemplate = () => {
               <NavGradient />
               <NavItems>
                 {navItems.map(item => {
+                  // Handle separator
+                  if (item.label === 'separator') {
+                    return (
+                      <NavSeparator key={item.id}>
+                        <NavSeparatorLine />
+                      </NavSeparator>
+                    );
+                  }
+
                   const isActive = activeNavItem === item.id;
                   const IconComponent = typeof item.icon === 'function' ? item.icon : null;
 
@@ -241,7 +323,7 @@ export const GlobalNavPageTemplate = () => {
                 })}
               </NavItems>
               <NavBottom>
-                {isKnowledge && (
+                {showSubnav && (
                   <CollapseButton
                     onClick={() => setIsSubnavExpanded(!isSubnavExpanded)}
                     aria-label={isSubnavExpanded ? 'Collapse' : 'Expand'}
@@ -253,6 +335,7 @@ export const GlobalNavPageTemplate = () => {
             </Nav>
 
             {isKnowledge && isSubnavExpanded && <KnowledgeSubnav />}
+            {isAIAgents && isSubnavExpanded && <AIAgentsSubnav />}
           </NavAndSubnav>
 
           <MainContent>
