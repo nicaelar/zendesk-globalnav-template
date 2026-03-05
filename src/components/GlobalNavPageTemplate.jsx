@@ -38,6 +38,17 @@ import {
 import { TopBar } from './TopBar';
 import { KnowledgeSubnav } from './KnowledgeSubnav';
 import { AIAgentsSubnav } from './AIAgentsSubnav';
+import { SupportMainContent } from './mainContent/SupportMainContent';
+import { KnowledgeMainContent } from './mainContent/KnowledgeMainContent';
+import { AIAgentsMainContent } from './mainContent/AIAgentsMainContent';
+import { ChatMainContent } from './mainContent/ChatMainContent';
+import { VoiceMainContent } from './mainContent/VoiceMainContent';
+import { AnalyticsMainContent } from './mainContent/AnalyticsMainContent';
+import { WorkforceManagementMainContent } from './mainContent/WorkforceManagementMainContent';
+import { QualityAssuranceMainContent } from './mainContent/QualityAssuranceMainContent';
+import { CommunityMainContent } from './mainContent/CommunityMainContent';
+import { SalesMainContent } from './mainContent/SalesMainContent';
+import { AdminCenterMainContent } from './mainContent/AdminCenterMainContent';
 
 // Styled Components
 const PageContainer = styled.div`
@@ -178,13 +189,6 @@ const MainContent = styled.main`
   border-radius: 8px 0px 0px 0px;
   flex: 1;
   align-self: stretch;
-`;
-
-const ContentArea = styled.div`
-  flex: 1;
-  width: 100%;
-  padding: 24px;
-  overflow: auto;
 `;
 
 // Component
@@ -343,11 +347,17 @@ export const GlobalNavPageTemplate = () => {
           </NavAndSubnav>
 
           <MainContent>
-            <ContentArea>
-              {/* Main content goes here */}
-              <h1>Content Area</h1>
-              <p>This is where your page content will be displayed.</p>
-            </ContentArea>
+            {currentProduct === 'support' && <SupportMainContent />}
+            {currentProduct === 'knowledge' && <KnowledgeMainContent />}
+            {currentProduct === 'ai-agents' && <AIAgentsMainContent />}
+            {currentProduct === 'chat' && <ChatMainContent />}
+            {currentProduct === 'voice' && <VoiceMainContent />}
+            {currentProduct === 'analytics' && <AnalyticsMainContent />}
+            {currentProduct === 'workforce-management' && <WorkforceManagementMainContent />}
+            {currentProduct === 'quality-assurance' && <QualityAssuranceMainContent />}
+            {currentProduct === 'community' && <CommunityMainContent />}
+            {currentProduct === 'sales' && <SalesMainContent />}
+            {currentProduct === 'admin-center' && <AdminCenterMainContent />}
           </MainContent>
         </MainContainer>
       </PageContainer>
