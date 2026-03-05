@@ -44,6 +44,17 @@ function App() {
 }
 ```
 
+### Building on Top of the Template
+
+**IMPORTANT**: When building features or implementing Figma designs on top of this template:
+
+- ✅ **DO**: Modify only the specific `*MainContent.jsx` files in `src/components/mainContent/`
+- ❌ **DON'T**: Modify `GlobalNavPageTemplate.jsx`, `TopBar.jsx`, or the left navigation structure
+
+The template chrome (TopBar + left nav) should be preserved unless explicitly needed. See `.claude/skills/build-main-content.claude.md` for detailed instructions on how to build on top of this template correctly.
+
+**For Claude Code users**: The `/build-main-content` skill ensures proper integration with the template structure.
+
 ### Individual Components
 
 ```jsx

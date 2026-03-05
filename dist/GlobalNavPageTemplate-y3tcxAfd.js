@@ -1182,8 +1182,10 @@ const mn = ({ currentProduct: i = "support", onProductChange: x }) => {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   width: 56px;
-  padding: 8px 16px;
+  height: 48px;
+  padding: 0 16px;
 `, hi = o.div`
   width: 23px;
   height: 1px;
@@ -1356,4 +1358,4 @@ export {
   Fn as f,
   Q as p
 };
-//# sourceMappingURL=GlobalNavPageTemplate-CD8I2TKv.js.map
+//# sourceMappingURL=GlobalNavPageTemplate-y3tcxAfd.js.map

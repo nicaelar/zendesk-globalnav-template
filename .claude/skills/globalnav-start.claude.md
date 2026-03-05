@@ -35,7 +35,6 @@ Ask the user what they want to name their project (default to "my-globalnav-app"
 ### Step 2: Create Vite Project
 
 ```bash
-cd /Users/nicaelarivera  # Or user's preferred directory
 npm create vite@latest PROJECT_NAME -- --template react
 cd PROJECT_NAME
 ```

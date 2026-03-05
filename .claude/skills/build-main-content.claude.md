@@ -55,6 +55,22 @@ When the user says something like:
 
 Extract the product name and map it to the correct MainContent component.
 
+### Step 1.5: Check-In with User (REQUIRED for Figma designs)
+
+**CRITICAL**: When the user provides a Figma URL or asks to implement a Figma design, ALWAYS ask this question BEFORE implementing:
+
+**"I'll implement this design in the [Product] main content area. Should I also update:**
+- **The top bar?** (Yes/No)
+- **The left navigation?** (Yes/No)
+
+**If not specified, I'll only modify the main content component and preserve all navigation chrome."**
+
+**Default behavior if user doesn't specify**: Only modify the MainContent component. DO NOT touch TopBar or left navigation.
+
+**If user says "Yes" to updating chrome**: Then and only then you may modify TopBar.jsx or the Nav section in GlobalNavPageTemplate.jsx.
+
+This check-in prevents accidentally overwriting the template navigation chrome when building Figma designs.
+
 ### Step 2: Read the Current MainContent Component
 
 Read the relevant MainContent component file to understand its current structure:
@@ -81,11 +97,14 @@ Each MainContent component:
 - ✅ **DO**: Use Garden typography (XL, LG, MD, SM)
 - ✅ **DO**: Follow the existing styled-components pattern
 - ✅ **DO**: Keep the ContentArea wrapper with its styling
-- ❌ **DON'T**: Modify TopBar.jsx
-- ❌ **DON'T**: Modify any Subnav components (KnowledgeSubnav.jsx, AIAgentsSubnav.jsx)
-- ❌ **DON'T**: Modify GlobalNavPageTemplate.jsx
-- ❌ **DON'T**: Change the left navigation structure
-- ❌ **DON'T**: Change the top bar or product switcher
+- ✅ **DO**: Ask user FIRST if they want chrome updated (when working with Figma designs)
+- ❌ **DON'T**: Modify TopBar.jsx (unless user explicitly confirms)
+- ❌ **DON'T**: Modify any Subnav components (unless user explicitly confirms)
+- ❌ **DON'T**: Modify GlobalNavPageTemplate.jsx (unless user explicitly confirms)
+- ❌ **DON'T**: Change the left navigation structure (unless user explicitly confirms)
+- ❌ **DON'T**: Change the top bar or product switcher (unless user explicitly confirms)
+- ❌ **DON'T**: Add your own ThemeProvider (one already exists at root)
+- ❌ **DON'T**: Replace the entire template when implementing Figma designs
 
 ### Step 5: Use Garden Components
 
@@ -142,6 +161,109 @@ After making changes:
 2. Navigate to the correct product in the UI
 3. Confirm the main content area shows your changes
 4. Confirm the TopBar and left nav are unchanged
+
+## Working with Figma Designs
+
+When the user provides a Figma URL to implement a design, follow this workflow:
+
+### 1. Confirm Scope with User
+
+**ALWAYS ask this question BEFORE implementing:**
+
+```
+I'll implement this design in the [Product] main content area. Should I also update:
+- The top bar? (Yes/No)
+- The left navigation? (Yes/No)
+
+If not specified, I'll only modify the main content component and preserve all navigation chrome.
+```
+
+### 2. Default Behavior
+
+**Unless user explicitly says "Yes"**: Only modify the MainContent component. Do NOT touch:
+- GlobalNavPageTemplate.jsx
+- TopBar.jsx
+- Nav section in GlobalNavPageTemplate.jsx
+- Any Subnav components
+
+### 3. Adapt Figma Code for Main Content
+
+When implementing Figma designs in a MainContent component:
+
+**Remove:**
+- Any `<ThemeProvider>` wrappers (already exists at root)
+- Full-page layout containers (e.g., PageContainer)
+- Navigation elements (unless user approved chrome updates)
+
+**Keep:**
+- The existing `ContentArea` wrapper
+- The component export structure
+- Garden component usage
+
+**Adapt:**
+- Fit the Figma content inside the existing `ContentArea`
+- Use Garden typography (XL, LG, MD, SM) where appropriate
+- Preserve responsive behavior
+
+### 4. Example: Figma Design → MainContent
+
+❌ **WRONG** - Don't do this:
+```jsx
+// Replacing the entire GlobalNavPageTemplate with Figma output
+export const GlobalNavPageTemplate = () => {
+  return (
+    <ThemeProvider>
+      <FullPageLayout>
+        {/* Figma-generated nav + content */}
+      </FullPageLayout>
+    </ThemeProvider>
+  );
+};
+```
+
+✅ **CORRECT** - Do this:
+```jsx
+// Only updating the MainContent component
+import React from 'react';
+import styled from 'styled-components';
+import { XL, MD } from '@zendeskgarden/react-typography';
+
+const ContentArea = styled.div`
+  flex: 1;
+  width: 100%;
+  padding: 24px;
+  overflow: auto;
+`;
+
+// Your Figma-adapted styled components
+const FigmaContent = styled.div`
+  /* Figma design styles */
+`;
+
+export const SupportMainContent = () => {
+  return (
+    <ContentArea>
+      {/* Figma content adapted here */}
+      <FigmaContent>
+        <XL tag="h1">Figma Design Title</XL>
+        {/* Rest of Figma content */}
+      </FigmaContent>
+    </ContentArea>
+  );
+};
+
+export default SupportMainContent;
+```
+
+### 5. Common Figma Integration Mistakes
+
+| Mistake | Impact | Solution |
+|---------|--------|----------|
+| Replacing GlobalNavPageTemplate.jsx | Left nav disappears | Only edit MainContent component |
+| Adding nested ThemeProvider | Styling conflicts | Remove it, use root provider |
+| Hard-coding full page dimensions | Breaks layout | Use ContentArea wrapper |
+| Ignoring existing structure | Navigation broken | Preserve template chrome |
+| Not asking about scope | Wrong files modified | Always ask check-in question |
 
 ## Examples
 

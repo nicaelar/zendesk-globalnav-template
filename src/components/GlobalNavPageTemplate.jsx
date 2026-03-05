@@ -143,8 +143,10 @@ const NavSeparator = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   width: 56px;
-  padding: 8px 16px;
+  height: 48px;
+  padding: 0 16px;
 `;
 
 const NavSeparatorLine = styled.div`
