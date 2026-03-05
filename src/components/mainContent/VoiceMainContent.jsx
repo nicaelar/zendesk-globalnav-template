@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { XL } from '@zendeskgarden/react-typography';
 
 const ContentArea = styled.div`
   flex: 1;
@@ -8,19 +9,10 @@ const ContentArea = styled.div`
   overflow: auto;
 `;
 
-const Title = styled.h1`
-  font-family: 'SF Pro Display', sans-serif;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 36px;
-  color: #293239;
-  margin: 0 0 16px 0;
-`;
-
 export const VoiceMainContent = () => {
   return (
     <ContentArea>
-      <Title>Voice's main content area</Title>
+      <XL tag="h1" style={{ marginBottom: '16px' }}>Voice's main content area</XL>
       <p>This is where your Voice page content will be displayed.</p>
     </ContentArea>
   );
