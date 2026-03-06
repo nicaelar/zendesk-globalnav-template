@@ -33,7 +33,7 @@ import {
   GraduateCapIcon,
   CloudSunIcon,
   CalendarIcon,
-} from '../icons/GlobalNavIcons';
+} from '../../icons/GlobalNavIcons';
 
 // Styled Components
 const Nav = styled.nav`

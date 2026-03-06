@@ -20,9 +20,10 @@ export default defineConfig({
     lib: {
       entry: {
         index: resolve(process.cwd(), 'src/lib/index.js'),
-        components: resolve(process.cwd(), 'src/lib/components.js'),
+        chrome: resolve(process.cwd(), 'src/lib/chrome.js'),
+        mainContent: resolve(process.cwd(), 'src/lib/mainContent.js'),
         icons: resolve(process.cwd(), 'src/lib/icons.js'),
-        mainContent: resolve(process.cwd(), 'src/lib/mainContent.js')
+        components: resolve(process.cwd(), 'src/lib/components.js')
       },
       formats: ['es', 'cjs'],
       fileName: (format, entryName) =>

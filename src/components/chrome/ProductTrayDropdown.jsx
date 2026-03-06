@@ -12,7 +12,7 @@ import {
   ProductCommunityIcon,
   ProductSalesIcon,
   ProductAdminCenterIcon,
-} from '../icons/GlobalNavIcons';
+} from '../../icons/GlobalNavIcons';
 
 const DropdownContainer = styled.div`
   position: absolute;

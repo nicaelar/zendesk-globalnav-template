@@ -19,7 +19,10 @@
       "Bash(ssh-keyscan:*)",
       "Bash(git push:*)",
       "Bash(git tag:*)",
-      "Bash(npm create:*)"
+      "Bash(npm create:*)",
+      "Bash(grep:*)",
+      "Bash(lsof:*)",
+      "Bash(git mv:*)"
     ]
   }
 }

@@ -5,17 +5,17 @@ import { TopBar } from './TopBar';
 import { MainNav } from './MainNav';
 import { KnowledgeSubnav } from './KnowledgeSubnav';
 import { AIAgentsSubnav } from './AIAgentsSubnav';
-import { SupportMainContent } from './mainContent/SupportMainContent';
-import { KnowledgeMainContent } from './mainContent/KnowledgeMainContent';
-import { AIAgentsMainContent } from './mainContent/AIAgentsMainContent';
-import { ChatMainContent } from './mainContent/ChatMainContent';
-import { VoiceMainContent } from './mainContent/VoiceMainContent';
-import { AnalyticsMainContent } from './mainContent/AnalyticsMainContent';
-import { WorkforceManagementMainContent } from './mainContent/WorkforceManagementMainContent';
-import { QualityAssuranceMainContent } from './mainContent/QualityAssuranceMainContent';
-import { CommunityMainContent } from './mainContent/CommunityMainContent';
-import { SalesMainContent } from './mainContent/SalesMainContent';
-import { AdminCenterMainContent } from './mainContent/AdminCenterMainContent';
+import { SupportMainContent } from '../mainContent/SupportMainContent';
+import { KnowledgeMainContent } from '../mainContent/KnowledgeMainContent';
+import { AIAgentsMainContent } from '../mainContent/AIAgentsMainContent';
+import { ChatMainContent } from '../mainContent/ChatMainContent';
+import { VoiceMainContent } from '../mainContent/VoiceMainContent';
+import { AnalyticsMainContent } from '../mainContent/AnalyticsMainContent';
+import { WorkforceManagementMainContent } from '../mainContent/WorkforceManagementMainContent';
+import { QualityAssuranceMainContent } from '../mainContent/QualityAssuranceMainContent';
+import { CommunityMainContent } from '../mainContent/CommunityMainContent';
+import { SalesMainContent } from '../mainContent/SalesMainContent';
+import { AdminCenterMainContent } from '../mainContent/AdminCenterMainContent';
 
 // Styled Components
 const PageContainer = styled.div`

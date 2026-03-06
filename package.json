@@ -13,18 +13,23 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./components": {
-      "import": "./dist/components.js",
-      "require": "./dist/components.cjs"
-    },
-    "./icons": {
-      "import": "./dist/icons.js",
-      "require": "./dist/icons.cjs"
+    "./chrome": {
+      "types": "./dist/chrome.d.ts",
+      "import": "./dist/chrome.js",
+      "require": "./dist/chrome.cjs"
     },
     "./mainContent": {
       "types": "./dist/mainContent.d.ts",
       "import": "./dist/mainContent.js",
       "require": "./dist/mainContent.cjs"
+    },
+    "./icons": {
+      "import": "./dist/icons.js",
+      "require": "./dist/icons.cjs"
+    },
+    "./components": {
+      "import": "./dist/components.js",
+      "require": "./dist/components.cjs"
     }
   },
   "files": [

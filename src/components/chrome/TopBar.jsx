@@ -22,7 +22,7 @@ import {
   PersonIcon,
   EarthIcon,
   RocketIcon,
-} from '../icons/GlobalNavIcons';
+} from '../../icons/GlobalNavIcons';
 import { ProductTrayDropdown, products } from './ProductTrayDropdown';
 
 // Product icon mapping

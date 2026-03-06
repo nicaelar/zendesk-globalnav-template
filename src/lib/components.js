@@ -1,20 +1,6 @@
-// Components only
-export { GlobalNavPageTemplate } from '../components/GlobalNavPageTemplate'
-export { TopBar } from '../components/TopBar'
-export { MainNav } from '../components/MainNav'
-export { KnowledgeSubnav } from '../components/KnowledgeSubnav'
-export { AIAgentsSubnav } from '../components/AIAgentsSubnav'
-export { ProductTrayDropdown, products } from '../components/ProductTrayDropdown'
+// @deprecated Use ./chrome or ./mainContent instead
+// This bundle will be removed in v2.0.0
+console.warn('Importing from zendesk-globalnav-template/components is deprecated. Use /chrome or /mainContent instead.')
 
-// Main Content Components
-export { SupportMainContent } from '../components/mainContent/SupportMainContent'
-export { KnowledgeMainContent } from '../components/mainContent/KnowledgeMainContent'
-export { AIAgentsMainContent } from '../components/mainContent/AIAgentsMainContent'
-export { ChatMainContent } from '../components/mainContent/ChatMainContent'
-export { VoiceMainContent } from '../components/mainContent/VoiceMainContent'
-export { AnalyticsMainContent } from '../components/mainContent/AnalyticsMainContent'
-export { WorkforceManagementMainContent } from '../components/mainContent/WorkforceManagementMainContent'
-export { QualityAssuranceMainContent } from '../components/mainContent/QualityAssuranceMainContent'
-export { CommunityMainContent } from '../components/mainContent/CommunityMainContent'
-export { SalesMainContent } from '../components/mainContent/SalesMainContent'
-export { AdminCenterMainContent } from '../components/mainContent/AdminCenterMainContent'
+export * from './chrome'
+export * from './mainContent'

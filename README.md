@@ -71,14 +71,44 @@ function MyApp() {
 }
 ```
 
+## Package Exports
+
+This package provides separate export paths for different use cases:
+
+### For Feature Development (Recommended)
+
+Import only MainContent components to build features:
+
+```js
+import { SupportMainContent } from 'zendesk-globalnav-template/mainContent'
+import { AIAgentsMainContent } from 'zendesk-globalnav-template/mainContent'
+```
+
+**Safe to modify:** These components are designed to be customized for your product pages.
+
+### For Chrome Reference (Advanced)
+
+Import navigation chrome components (rarely needed):
+
+```js
+import { TopBar, MainNav } from 'zendesk-globalnav-template/chrome'
+```
+
+**Not safe to modify:** These components control the global navigation structure.
+
+### Full Template Import
+
+Import everything (for reference or full template usage):
+
+```js
+import { GlobalNavPageTemplate, SupportMainContent } from 'zendesk-globalnav-template'
+```
+
 ### Tree-Shakeable Imports
 
 Import only what you need to reduce bundle size:
 
 ```jsx
-// Import only components
-import { TopBar, KnowledgeSubnav } from 'zendesk-globalnav-template/components'
-
 // Import only icons
 import { HomeIcon, InboxIcon, SettingsIcon } from 'zendesk-globalnav-template/icons'
 
@@ -92,6 +122,8 @@ function Navigation() {
   )
 }
 ```
+
+**Deprecated:** The `/components` export is deprecated. Use `/chrome` or `/mainContent` instead.
 
 ## Components
 

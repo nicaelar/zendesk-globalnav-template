@@ -1,23 +1,24 @@
-import { A as t, G as e, K as o, M as s, P as i, T as C, p as r } from "./GlobalNavPageTemplate-xW80uU_V.js";
-import { A as p, a as A, b as l, C as u, c, K as d, Q as m, S as g, d as S, V as b, W as v } from "./AdminCenterMainContent-B74M0PH-.js";
+import { A as t, G as e, K as o, M as s, P as i, T as r, p as C } from "./GlobalNavPageTemplate-xW80uU_V.js";
+import { A as m, a as p, b as l, C as c, c as d, K as A, Q as g, S as u, d as b, V as v, W as S } from "./AdminCenterMainContent-B74M0PH-.js";
+console.warn("Importing from zendesk-globalnav-template/components is deprecated. Use /chrome or /mainContent instead.");
 export {
-  p as AIAgentsMainContent,
+  m as AIAgentsMainContent,
   t as AIAgentsSubnav,
-  A as AdminCenterMainContent,
+  p as AdminCenterMainContent,
   l as AnalyticsMainContent,
-  u as ChatMainContent,
-  c as CommunityMainContent,
+  c as ChatMainContent,
+  d as CommunityMainContent,
   e as GlobalNavPageTemplate,
-  d as KnowledgeMainContent,
+  A as KnowledgeMainContent,
   o as KnowledgeSubnav,
   s as MainNav,
   i as ProductTrayDropdown,
-  m as QualityAssuranceMainContent,
-  g as SalesMainContent,
-  S as SupportMainContent,
-  C as TopBar,
-  b as VoiceMainContent,
-  v as WorkforceManagementMainContent,
-  r as products
+  g as QualityAssuranceMainContent,
+  u as SalesMainContent,
+  b as SupportMainContent,
+  r as TopBar,
+  v as VoiceMainContent,
+  S as WorkforceManagementMainContent,
+  C as products
 };
 //# sourceMappingURL=components.js.map

@@ -1,22 +1,4 @@
-// Components
-export { GlobalNavPageTemplate } from '../components/GlobalNavPageTemplate'
-export { TopBar } from '../components/TopBar'
-export { KnowledgeSubnav } from '../components/KnowledgeSubnav'
-export { AIAgentsSubnav } from '../components/AIAgentsSubnav'
-export { ProductTrayDropdown, products } from '../components/ProductTrayDropdown'
-
-// Main Content Components
-export { SupportMainContent } from '../components/mainContent/SupportMainContent'
-export { KnowledgeMainContent } from '../components/mainContent/KnowledgeMainContent'
-export { AIAgentsMainContent } from '../components/mainContent/AIAgentsMainContent'
-export { ChatMainContent } from '../components/mainContent/ChatMainContent'
-export { VoiceMainContent } from '../components/mainContent/VoiceMainContent'
-export { AnalyticsMainContent } from '../components/mainContent/AnalyticsMainContent'
-export { WorkforceManagementMainContent } from '../components/mainContent/WorkforceManagementMainContent'
-export { QualityAssuranceMainContent } from '../components/mainContent/QualityAssuranceMainContent'
-export { CommunityMainContent } from '../components/mainContent/CommunityMainContent'
-export { SalesMainContent } from '../components/mainContent/SalesMainContent'
-export { AdminCenterMainContent } from '../components/mainContent/AdminCenterMainContent'
-
-// Icons (all 37)
+// Main bundle - exports everything (backward compatible)
+export * from './chrome'
+export * from './mainContent'
 export * from '../icons/GlobalNavIcons'

@@ -16,6 +16,39 @@ trigger_phrases:
 
 This skill helps you build features on top of the GlobalNav template by modifying **only the main content components** while preserving the TopBar and left navigation.
 
+## CRITICAL: Import Rules (MUST FOLLOW)
+
+When implementing Figma designs or building features:
+
+✅ **ALWAYS import from the mainContent bundle:**
+```jsx
+import { SupportMainContent } from 'zendesk-globalnav-template/mainContent'
+import { KnowledgeMainContent } from 'zendesk-globalnav-template/mainContent'
+```
+
+❌ **NEVER import chrome components (unless user explicitly confirms chrome updates):**
+```jsx
+// DON'T DO THIS when building features
+import { TopBar, GlobalNavPageTemplate } from 'zendesk-globalnav-template/chrome'
+import { MainNav } from 'zendesk-globalnav-template'
+```
+
+**Why This Matters:**
+- The `/mainContent` export contains ONLY the 11 product MainContent components
+- The `/chrome` export contains navigation structure (TopBar, Nav, Subnav)
+- When you import from `/mainContent`, chrome components are NOT available
+- This prevents accidental modifications to the navigation chrome
+
+**File System Protection:**
+- Chrome components: `src/components/chrome/` → Protected
+- MainContent components: `src/components/mainContent/` → Safe to modify
+
+**Default Behavior:**
+Unless the user explicitly says to update the TopBar or left navigation:
+1. Import from `/mainContent` bundle only
+2. Modify only the specific `*MainContent.jsx` component
+3. Never touch GlobalNavPageTemplate, TopBar, MainNav, or Subnav files
+
 ## What This Skill Does
 
 When a user asks to build something in a product's main content area (e.g., "Build on the Support main content area"), this skill:

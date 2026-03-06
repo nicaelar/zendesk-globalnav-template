@@ -13,7 +13,7 @@ import {
   AppsIcon,
   FlowIcon,
   MonitorIcon
-} from '../icons/GlobalNavIcons';
+} from '../../icons/GlobalNavIcons';
 
 const SubnavContainer = styled.div`
   display: flex;
